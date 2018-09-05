@@ -1,0 +1,23 @@
+
+html, body {
+height: 100%;
+margin: 0;
+display: block;
+
+}
+body {
+background-color: rgba(218, 3, 34, 0.09) ;
+font-size: 16px;
+    border: 25px ;
+    padding: 25px;
+    margin: 25px;
+
+}
+
+html, body, p {
+font-family: "source-sans-pro", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+font-weight: 400;
+color: #074659;
+font-style: normal;
+font-size: 1rem;
+}
