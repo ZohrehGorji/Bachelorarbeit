@@ -95,18 +95,22 @@ font-size: 1rem;
 h1, #summary{
   text-align: center;
 }
+
 /* Style the tab */
 .tab {
-    float: left;
+    /*float: left;
     border: 1px solid #ccc;
     background-color: #4f80ad;
     width: 10%;
-    height: 300px;
+    height: 300px;*/
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #4f80ad;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-    display: block;
+    /*display: block;
     background-color: inherit;
     color: black;
     padding: 22px 16px;
@@ -116,7 +120,15 @@ h1, #summary{
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 17px;*/
+    background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
@@ -131,14 +143,31 @@ h1, #summary{
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
+  /*  float: left;
     padding: 0px 12px;
     border: 1px solid #ccc;
     width: 70%;
-    border-left: none;
-    height: 300px;
-}
+    border-left: none;*/
 
+    display: none;
+  padding: 6px 12px;
+  
+  border: 1px solid #ccc;
+  border-top: none;
+    height: 700px;
+    overflow-y: scroll;
+}
+/*pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  overflow: auto;
+  width: auto;
+  padding: 5px;
+  background-color: #eee;
+  width: 650px!ie7;
+  padding-bottom: 20px!ie7;
+  max-height: 600px;
+}*/
 #footer{
 float:left;
 width:200px;
