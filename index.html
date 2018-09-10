@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<!-- Optimizely -->
-<title>A Guide To Create DAPP </title>
-<meta name="description" content="dapp step-by-step guide.">
-<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit"/>
 
-<link rel="stylesheet"  type="text/css" href="stylesheet.css">
+<head>
+	<meta charset="utf-8">
+	<!-- Optimizely -->
+	<title>A Guide To Create DAPP </title>
+	<meta name="description" content="dapp step-by-step guide.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 </head>
 
 <body>
 
-<h1>Tutorial</h1>
-<p>Create, compile, deploy smart contracts on Ethereum + Angular / react</p>
+	<h1>A guide to create DApp</h1>
+	<p id="summary">Create, compile, deploy smart contracts on Ethereum + Angular / react</p>
 
 	<!-- intro below -->
 	<div class="view absolute" id='intro-view'>
 		<div class="center-column">
-			<h2 class="main-font">A guide to create</h2>
-			<h1 class="big-header">DApp Tutorial</h1>
+			<!--h2 class="main-font">A guide to create</h2>
+			<h1 class="big-header">DApp Tutorial</h1-->
 			<h4 class="explain">In this Tutorial, we'll be showing creatiation of a
         simple smart contract and UI and how to connect these two with web3 , also there will be a comparision of Angular and react at the end.</h4>
+			<h2>Content:</h2>
+
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
+				<button class="tablinks" onclick="openCity(event, 'Deploy')">Deploy</button>
+				<button class="tablinks" onclick="openCity(event, 'Web3.js')">Web3.js</button>
+			</div>
+
+			<div id="Create" class="tabcontent">
+				<h3>Create</h3>
+				<p>how to make a smart contract.</p>
+			</div>
+
+			<div id="Deploy" class="tabcontent">
+				<h3>Deploy</h3>
+				<p>how to deploy it (Ethereum Development Walkthrough (Part 2: Truffle, Ganache, Geth and Mist).</p>
+
+			</div>
+
+			<div id="Web3.js" class="tabcontent">
+				<h3>Web3.js</h3>
+				<p>JavaScript, frameworks, jQuery</p>
+
+			</div>
 
 
+			<script>
+				function openCity(evt, cityName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(cityName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
 
-			<button ng-click="go('start')" id="start-button">Start</button>
-			<div class="branding-div">
-				<div class="created-by">
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
+			<!--button class="button">Start</button-->
+
+
+			<div>
+				<div id="footer">
 					<h3>Created by Zohreh Gorji</h3>
 				</div>
-				<div class="fb-like" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-colorscheme="light" data-action="like"></div>
 			</div>
 		</div>
 	</div>
