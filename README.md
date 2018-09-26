@@ -1,18 +1,18 @@
 # Bachelorarbeit
 # Project setup:
 ### //install npm:
-npm install -g npm
+-> npm install -g npm
 ### //install truffle 
-npm install -g truffle
+-> npm install -g truffle
 ### //install test environment 
 *Ethereum TestRPC is a fast and customizable blockchain emulator. It allows making calls to the blockchain without the overheads of running an actual Ethereum node. [1]*
 
-npm install -g ethereumjs-testrpc
+-> npm install -g ethereumjs-testrpc
 ### //create a folder for project and Initialize a Truffle project base
-Cd desktop
-mkdir project_blockchain
-cd project_blockchain
-truffle init // creates a project base
+-> Cd desktop
+-> mkdir project_blockchain
+-> cd project_blockchain
+-> truffle init // creates a project base
 ### //download and run ganache to get 10 accounts 
 https://truffleframework.com/ganache
 
