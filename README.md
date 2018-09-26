@@ -17,13 +17,14 @@ https://truffleframework.com/ganache
 
 
 ##//run the test environment and project parallel in two different cmd(windows) or terminal(mac):
-test environment | run project 
+
+| test environment | run project |
+| ---------------- | ------------|
+| Cd desktop/project_blockchain | Cd desktop/project_blockchain |
+| ------------ | -------------|
+| Testrpc | •	Truffle compile // to compile the project|
 ------------ | -------------
-Cd desktop/project_blockchain | Cd desktop/project_blockchain
------------- | -------------
-Testrpc | •	Truffle compile // to compile the project
------------- | -------------
-keep cmd open |•	Truffle test // to test the project
+|keep cmd open |•	Truffle test // to test the project|
  
 Note* in windows: truffle.cmd test and truffle.cmd compile 
 
