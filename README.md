@@ -16,7 +16,7 @@ truffle init // creates a project base
 https://truffleframework.com/ganache
 
 
-##//run the test environment and project parallel in two different cmd(windows) or terminal(mac):
+## //run the test environment and project parallel in two different cmd(windows) or terminal(mac):
 
 | test environment | run project |
 | ---------------- | ------------|
