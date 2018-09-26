@@ -10,8 +10,11 @@
 -> npm install -g ethereumjs-testrpc
 ### //create a folder for project and Initialize a Truffle project base
 -> Cd desktop
+
 -> mkdir project_blockchain
+
 -> cd project_blockchain
+
 -> truffle init // creates a project base
 ### //download and run ganache to get 10 accounts 
 https://truffleframework.com/ganache
