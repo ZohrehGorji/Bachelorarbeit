@@ -6,6 +6,7 @@ npm install -g npm
 npm install -g truffle
 ### //install test environment 
 *Ethereum TestRPC is a fast and customizable blockchain emulator. It allows making calls to the blockchain without the overheads of running an actual Ethereum node. [1]*
+
 npm install -g ethereumjs-testrpc
 ### //create a folder for project and Initialize a Truffle project base
 Cd desktop
