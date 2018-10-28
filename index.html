@@ -39,16 +39,69 @@
 			</div>
 
 			<div id="Create" class="tabcontent">
-				<h3>Create</h3>
-				<p>how to make a smart contract, Create:</p>
+				<h3> Create the smart contract </h3>
+				<p> In this section we will be covering how to make a smart contract?</p>
 				<ol>
-					<li> Write the smart contract in solidity and test it manually in remix</li>
-					<li> Create truffle base project and run either testRPC or ganache</li>
+					<li>Step 1: Write the smart contract in solidity</li>
+					<p>Solidity like any other language has it’s own syntax and there is a documentation page 
+						https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html which 
+						will be update once a new version of library is released.
+					<code> pragma solidity ^0.4.0;
+					contract SimpleStorage {
+					} </code>
+					We usually try to keep the contract short, so we don’t have to redeploy our contract every time 
+						something changes, because redeploying means changing the address and in some cases 
+						address of smart contract needs to be stable.  Other than that, everything that we 
+						write in smart contract will be staying on the blockchain forever, so we try to keep
+						the private information out of smart contract.
+					</p>
+					
+					
+					<li> Step 2: Test the smart contract in Remix </li>
+					<p>Easiest and the fastest way to test if our contract is functioning 
+						and the syntax of our code is correct, is by testing it in remix
+						, remix is “a web browser based IDE that allows you to write
+						Solidity smart contracts, then deploy and run the smart contract
+						.” [Remix - The Ethereum Wiki] usually when a contract runs on 
+						the remix, it means that we can deploy it and know that everything
+						is alright.
+						Remix has 3 type of environments: Javascript VM, Injected provider,
+						or Web3 provider.
+						Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
+						require the use of an external tool.
+						The JavaScript VM mode is convenient because each execution runs in your browser. 
+						Thus reloading the page will restart Remix with an empty state.
+						</p>
+					<li>  Step 3: Create truffle base project and run either testRPC or ganache</li>
+					<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
+						the right event is emited, we write a test based application to test our smart contract
+						and we use truffle init project for it.
+						<ul><li> Import smart contract in folder contract</li>
+						With truffle init, we get an empty deployable project from truffle and then we have to add 
+						our own smart contract in truffle contract folder
+						. 
+							<li> Change the truffle.js and write another file for deploy your current contract.</li>
+							Then we need a migration file for the new contract and in config file we have to establish 
+						our information.
+							<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
+							<li> Run truffle compile and test</li>/<ul>
+						Once everything is ready we check for truffle migrate and compile and if did deploy and 
+						compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or 
+						with solodoty it self.
+						Tests have to be usefull and they have to test our main functionallyit and also if the events
+						are emmited when they should and not emited
+						when they should not.
+
+							since we needs accounts to test our smart contract , one for sender and one or many other
+						for receiver we lunch either testrpc or ganache
+						, we just have to be sure that the local port ist the same as our config file in truffle.
+						Before: install Npm / truffle/testRPC or ganache
+					</p>
 					<ul> Before: install Npm / truffle/testRPC or ganache</ul>
-					<li> Import smart contract in folder contract</li>
-					<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
-					<li> Change the truffle.js and write another file for deploy your current contract.</li>
-					<li> Run truffle compile and test</li>
+					
+					
+					
+					
 					<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
 
 				</ol>
