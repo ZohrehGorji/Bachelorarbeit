@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- Optimizely -->
-	<title>A Guide To Create DAPP </title>
+	<title>A Simple Guide To Create a DApp </title>
 	<meta name="description" content="dapp step-by-step guide.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
@@ -15,37 +15,59 @@
 
 <body>
 
-	<h1>A guide to create DApp</h1>
-	<p id="summary">Create, compile, deploy smart contracts on Ethereum + Angular / react</p>
+	<h1>A Simple Guide To Create a decentralized Application on the Blockchain (DApp) </h1>
+	<p id="summary">Create, compile, deploy and test a smart contracts on Ethereum + Angular/react</p>
 
 	<!-- intro below -->
 	<div class="view absolute" id='intro-view'>
 		<div class="center-column">
-			<!--h2 class="main-font">A guide to create</h2>
-			<h1 class="big-header">DApp Tutorial</h1-->
-			<h4 class="explain">In this Tutorial, we'll be showing creatiation of a
-        simple smart contract and UI and how to connect these two with web3 , also there will be a comparision of Angular and react at the end.</h4>
+			<p class="explain">
+				In this Tutorial, we learn how to create a simple decentlized application
+				by writing a simple smart contract and the proper UI for it, then we use web3 to allow our client-side application to talk to the blockchain,
+				at the end we take a look at two most used frontend frameworks "Angular and react" and see which
+				could be the best possible option while creating a DApp.
+			</p>
+			<p>
+				before we start we need to know what is a blockchain and why and most importantly when should it be used, therefore we
+				look at the pro and cons of using the blockchain to realize blockchain is not always the solution and we need to be sure
+				about the reason that we approache it.
+			</p>
+			<h2></h2>
 			<h2>Content:</h2>
 
 			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'basic')" id="defaultOpen">What is the Blockchain? / Smart contract </button>
 				<button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
 				<button class="tablinks" onclick="openCity(event, 'Deploy')">Deploy</button>
 				<button class="tablinks" onclick="openCity(event, 'Web3.js')">Web3.js</button>
 				<button class="tablinks" onclick="openCity(event, 'reactvsangualr')">Frameworks</button>
-				<button class="tablinks" onclick="openCity(event, 'finally')">finally</button>
+				<button class="tablinks" onclick="openCity(event, 'finally')">How to host a blockchain decentralised application?
+</button>
 
 
 
 			</div>
+<div id="basic" class="tabcontent">
+	<ol>
+		<li>What is a Blockchain? </li>
 
+		<ul> pro & cons : </ul>
+		<ul> what to save on the blockchain? </ul>
+		<li>What is a smart contract?</li>
+		<ul> multiple smart contract? </ul>
+		<ul> redeploy smart contract and it's side affect</ul>
+		<ul> transparency of smart contract , pro and cons :</ul>
+		<ul> inheritance? </ul>
+	</ol>
+</div>
 			<div id="Create" class="tabcontent">
 				<h3> Create the smart contract </h3>
 				<p> In this section we will be covering how to make a smart contract?</p>
 				<ol>
 					<li>Step 1: Write the smart contract in solidity</li>
-					<p>Solidity like any other language has it’s own syntax and there is 
+					<p>Solidity like any other language has it’s own syntax and there is
 						<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">
-							a documentation page </a>, which 
+							a documentation page </a>, which
 						will be update once a new version of library is released.
 					</br>
 					<code> pragma solidity ^0.4.0;
@@ -53,27 +75,27 @@
 					contract SimpleStorage {
 					} </code>
 			</br>
-					We usually try to keep the contract short, so we don’t have to redeploy our contract every time 
-						something changes, because redeploying means changing the address and in some cases 
-						address of smart contract needs to be stable.  Other than that, everything that we 
+					We usually try to keep the contract short, so we don’t have to redeploy our contract every time
+						something changes, because redeploying means changing the address and in some cases
+						address of smart contract needs to be stable.  Other than that, everything that we
 						write in smart contract will be staying on the blockchain forever, so we try to keep
 						the private information out of smart contract.
 					</p>
-					
-					
+
+
 					<li> Step 2: Test the smart contract in Remix </li>
-					<p>Easiest and the fastest way to test if our contract is functioning 
+					<p>Easiest and the fastest way to test if our contract is functioning
 						and the syntax of our code is correct, is by testing it in remix
 						, remix is “a web browser based IDE that allows you to write
 						Solidity smart contracts, then deploy and run the smart contract
-						.” [Remix - The Ethereum Wiki] usually when a contract runs on 
+						.” [Remix - The Ethereum Wiki] usually when a contract runs on
 						the remix, it means that we can deploy it and know that everything
 						is alright.
 						Remix has 3 type of environments: Javascript VM, Injected provider,
 						or Web3 provider.
 						Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
 						require the use of an external tool.
-						The JavaScript VM mode is convenient because each execution runs in your browser. 
+						The JavaScript VM mode is convenient because each execution runs in your browser.
 						Thus reloading the page will restart Remix with an empty state.
 						</p>
 					<li>  Step 3: Create truffle base project and run either testRPC or ganache</li>
@@ -81,16 +103,16 @@
 						the right event is emited, we write a test based application to test our smart contract
 						and we use truffle init project for it.
 						<ul><li> Import smart contract in folder contract</li>
-						With truffle init, we get an empty deployable project from truffle and then we have to add 
+						With truffle init, we get an empty deployable project from truffle and then we have to add
 						our own smart contract in truffle contract folder
-						. 
+						.
 							<li> Change the truffle.js and write another file for deploy your current contract.</li>
-							Then we need a migration file for the new contract and in config file we have to establish 
+							Then we need a migration file for the new contract and in config file we have to establish
 						our information.
 							<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
 							<li> Run truffle compile and test</li>/<ul>
-						Once everything is ready we check for truffle migrate and compile and if did deploy and 
-						compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or 
+						Once everything is ready we check for truffle migrate and compile and if did deploy and
+						compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
 						with solodoty it self.
 						Tests have to be usefull and they have to test our main functionallyit and also if the events
 						are emmited when they should and not emited
@@ -102,10 +124,10 @@
 						Before: install Npm / truffle/testRPC or ganache
 					</p>
 					<ul> Before: install Npm / truffle/testRPC or ganache</ul>
-					
-					
-					
-					
+
+
+
+
 					<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
 
 				</ol>
@@ -115,7 +137,7 @@
 			<div id="Deploy" class="tabcontent">
 				<h3>Deploy</h3>
 				<p>how to deploy it on the test-net:</p>
-				<ol>	
+				<ol>
 				<li>Install meta mask</li>
 				<li>Ropsten is our test environment</li>
 				<li>Ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/</li>
