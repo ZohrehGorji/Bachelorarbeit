@@ -42,24 +42,24 @@
 				<button class="tablinks" onclick="openCity(event, 'Web3.js')">Web3.js</button>
 				<button class="tablinks" onclick="openCity(event, 'reactvsangualr')">Frameworks</button>
 				<button class="tablinks" onclick="openCity(event, 'finally')">How to host a blockchain decentralised application?
-</button>
+				</button>
 
 
 
 			</div>
-<div id="basic" class="tabcontent">
-	<ol>
-		<li>What is a Blockchain? </li>
+			<div id="basic" class="tabcontent">
+				<ol>
+					<li>What is a Blockchain? </li>
 
-		<ul> pro & cons : </ul>
-		<ul> what to save on the blockchain? </ul>
-		<li>What is a smart contract?</li>
-		<ul> multiple smart contract? </ul>
-		<ul> redeploy smart contract and it's side affect</ul>
-		<ul> transparency of smart contract , pro and cons :</ul>
-		<ul> inheritance? </ul>
-	</ol>
-</div>
+					<ul> pro & cons : </ul>
+					<ul> what to save on the blockchain? </ul>
+					<li>What is a smart contract?</li>
+					<ul> multiple smart contract? </ul>
+					<ul> redeploy smart contract and it's side affect</ul>
+					<ul> transparency of smart contract , pro and cons :</ul>
+					<ul> inheritance? </ul>
+				</ol>
+			</div>
 			<div id="Create" class="tabcontent">
 				<h3> Create the smart contract </h3>
 				<p> In this section we will be covering how to make a smart contract?</p>
@@ -69,15 +69,15 @@
 						<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">
 							a documentation page </a>, which
 						will be update once a new version of library is released.
-					</br>
-					<code> pragma solidity ^0.4.0;
 						</br>
-					contract SimpleStorage {
-					} </code>
-			</br>
-					We usually try to keep the contract short, so we don’t have to redeploy our contract every time
+						<code> pragma solidity ^0.4.0;
+							</br>
+							contract SimpleStorage {
+							} </code>
+						</br>
+						We usually try to keep the contract short, so we don’t have to redeploy our contract every time
 						something changes, because redeploying means changing the address and in some cases
-						address of smart contract needs to be stable.  Other than that, everything that we
+						address of smart contract needs to be stable. Other than that, everything that we
 						write in smart contract will be staying on the blockchain forever, so we try to keep
 						the private information out of smart contract.
 					</p>
@@ -97,31 +97,32 @@
 						require the use of an external tool.
 						The JavaScript VM mode is convenient because each execution runs in your browser.
 						Thus reloading the page will restart Remix with an empty state.
-						</p>
-					<li>  Step 3: Create truffle base project and run either testRPC or ganache</li>
+					</p>
+					<li> Step 3: Create truffle base project and run either testRPC or ganache</li>
 					<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
 						the right event is emited, we write a test based application to test our smart contract
 						and we use truffle init project for it.
-						<ul><li> Import smart contract in folder contract</li>
-						With truffle init, we get an empty deployable project from truffle and then we have to add
-						our own smart contract in truffle contract folder
-						.
+						<ul>
+							<li> Import smart contract in folder contract</li>
+							With truffle init, we get an empty deployable project from truffle and then we have to add
+							our own smart contract in truffle contract folder
+							.
 							<li> Change the truffle.js and write another file for deploy your current contract.</li>
 							Then we need a migration file for the new contract and in config file we have to establish
-						our information.
+							our information.
 							<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
 							<li> Run truffle compile and test</li>/<ul>
-						Once everything is ready we check for truffle migrate and compile and if did deploy and
-						compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
-						with solodoty it self.
-						Tests have to be usefull and they have to test our main functionallyit and also if the events
-						are emmited when they should and not emited
-						when they should not.
+								Once everything is ready we check for truffle migrate and compile and if did deploy and
+								compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
+								with solodoty it self.
+								Tests have to be usefull and they have to test our main functionallyit and also if the events
+								are emmited when they should and not emited
+								when they should not.
 
-							since we needs accounts to test our smart contract , one for sender and one or many other
-						for receiver we lunch either testrpc or ganache
-						, we just have to be sure that the local port ist the same as our config file in truffle.
-						Before: install Npm / truffle/testRPC or ganache
+								since we needs accounts to test our smart contract , one for sender and one or many other
+								for receiver we lunch either testrpc or ganache
+								, we just have to be sure that the local port ist the same as our config file in truffle.
+								Before: install Npm / truffle/testRPC or ganache
 					</p>
 					<ul> Before: install Npm / truffle/testRPC or ganache</ul>
 
@@ -138,26 +139,26 @@
 				<h3>Deploy</h3>
 				<p>how to deploy it on the test-net:</p>
 				<ol>
-				<li>Install meta mask</li>
-				<li>Ropsten is our test environment</li>
-				<li>Ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/</li>
-				<li>Set up infura account</li>
-				<li>Document the API from remix</li>
-				<li>Deploy on the ethereum.</li>
+					<li>Install meta mask</li>
+					<li>Ropsten is our test environment</li>
+					<li>Ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/</li>
+					<li>Set up infura account</li>
+					<li>Document the API from remix</li>
+					<li>Deploy on the ethereum.</li>
 				</ol>
 			</div>
 
 			<div id="Web3.js" class="tabcontent">
 				<h3>Web3.js</h3>
 				<p>
-				<ul>
-				<li> Step 1: After deploying the contract, you have a file with api and address of the contract</li>
-<li>Step 2: Now we can create a static page that runs on the local host.</li>
-<li>Step 3: We will be writing a JavaScript file and listen to event, we make a transaction.</li>
-<li>Step 4: In order to list the events, we will be using socket.io</li>
-<li>Step 5: Possible frameworks for this tutorial react, Angular JS and …</li>
-<li>Finally : At the end we have a contract on blockchain and we can make transaction and we can see a list of our transaction on our website on local host.</li>
-</ul>
+					<ul>
+						<li> Step 1: After deploying the contract, you have a file with api and address of the contract</li>
+						<li>Step 2: Now we can create a static page that runs on the local host.</li>
+						<li>Step 3: We will be writing a JavaScript file and listen to event, we make a transaction.</li>
+						<li>Step 4: In order to list the events, we will be using socket.io</li>
+						<li>Step 5: Possible frameworks for this tutorial react, Angular JS and …</li>
+						<li>Finally : At the end we have a contract on blockchain and we can make transaction and we can see a list of our transaction on our website on local host.</li>
+					</ul>
 				</p>
 
 
@@ -177,15 +178,15 @@
 					<li>Angular </li>
 					<li>pro & cons </li>
 					<li>when to use? </li>
-			 </ol>
-			 <ol>
-				 <li>React </li>
-				 <p>React is a JavaScript library created by Facebook, it is a User Interface (UI) library and a tool for building UI components</p>
-				 <li>pro & cons </li>
-				 <li>when to use? </li>
-			</ol>
-			<li>other options? </li>
-			<li> is it possible to change from a framework to the other? </li>
+				</ol>
+				<ol>
+					<li>React </li>
+					<p>React is a JavaScript library created by Facebook, it is a User Interface (UI) library and a tool for building UI components</p>
+					<li>pro & cons </li>
+					<li>when to use? </li>
+				</ol>
+				<li>other options? </li>
+				<li> is it possible to change from a framework to the other? </li>
 
 
 			</div>
@@ -193,15 +194,15 @@
 				<h3> GitHub pages setup !</h3>
 				<p>In this section, we will be publishing the static website on github so everybody can access it.
 					These steps will guide you through pushing your project into a repository and publishing it.
-
-	first of all, you need to signup in github and have an account then if you don’t already have a repository on github,
-	you need to create a Repository and pushing the code to the repository.
-
- 	1: create a new repo: go to github.com/new
-	2: Repository Name could be the name of the project.
-	3: Click Create Repository
-  4: by going to the setting you can see the link to the git hub page ,
-	 which is basically username + github+ io +repository name.</p>
+					<ol>
+						<li>first of all, you need to signup in github and have an account then if you don’t already have a repository on github,
+						you need to create a Repository and pushing the code to the repository.</li>
+						<li> create a new repo: go to github.com/new </li>
+						<li> Repository Name could be the name of the project.</li>
+						<li> Click Create Repository</li>
+						<li> by going to the setting you can see the link to the git hub page, which is basically username + github+ io +repository name.</li>
+					</ol>
+				</p>
 			</div>
 			<script>
 				function openCity(evt, cityName) {
