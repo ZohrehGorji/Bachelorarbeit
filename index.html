@@ -179,23 +179,27 @@
 				<h3> Create the smart contract </h3>
 				<p> In this section we will be covering how to make a smart contract?</p>
 				<ol>
-					<li>Step 1: Write the smart contract in solidity</li>
-					<p>Solidity like any other language has it’s own syntax and there is
-						<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">
-							a documentation page </a>, which
-						will be update once a new version of library is released.
-						</br>
-						<code> pragma solidity ^0.4.0;
+					<div>
+						<li>Step 1: Write the smart contract in solidity</li>
+						<p>Solidity like any other language has it’s own syntax and there is
+							<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">a documentation page </a>, which
+							will be update once a new version of library is released.
+							</br> we always start with the
+							<!--code> pragma solidity ^0.4.0;
 							</br>
 							contract SimpleStorage {
-							} </code>
-						</br>
-						We usually try to keep the contract short, so we don’t have to redeploy our contract every time
-						something changes, because redeploying means changing the address and in some cases
-						address of smart contract needs to be stable. Other than that, everything that we
-						write in smart contract will be staying on the blockchain forever, so we try to keep
-						the private information out of smart contract.
-					</p>
+							} </code-->"pragma + version" , since it indicates the version of the solidity language.
+							</br>
+							</br>
+							We usually try to keep the contract short, so we don’t have to re-deploy our contract every time
+							something changes, because re-deploying means changing the address and in some cases
+							address of smart contract needs to be stable. Other than that, everything that we
+							write in smart contract will be staying on the blockchain, so we try to keep
+							the private/not important information out of smart contract.
+
+
+						</p>
+					</div>
 
 
 					<li> Step 2: Test the smart contract in Remix </li>
@@ -220,13 +224,13 @@
 						<ul>
 							<li> Import smart contract in folder contract</li>
 							With truffle init, we get an empty deployable project from truffle and then we have to add
-							our own smart contract in truffle contract folder
-							.
+							our own smart contract in truffle contract folder.
 							<li> Change the truffle.js and write another file for deploy your current contract.</li>
 							Then we need a migration file for the new contract and in config file we have to establish
 							our information.
 							<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
-							<li> Run truffle compile and test</li>/<ul>
+							<li> Run truffle compile and test</li>
+							<ul>
 								Once everything is ready we check for truffle migrate and compile and if did deploy and
 								compiled without any problem , then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
 								with solodoty it self.
