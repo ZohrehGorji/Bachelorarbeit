@@ -65,7 +65,10 @@ h1, #summary{
   height: 700px;
   overflow-y: scroll;
 }
-
+.indented {
+  padding-left: 50pt;
+  padding-right: 50pt;
+}
 #footer{
 float:left;
 width:200px;

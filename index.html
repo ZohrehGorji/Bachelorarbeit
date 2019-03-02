@@ -49,110 +49,103 @@
 			</div>
 			<div id="basic" class="tabcontent">
 				<ul>
-					<li><h3>What is a Blockchain? </h3></li>
-					<p>
-						before we start with the development, we need to undrestand what blockchain is and how it works.
-						<br>
-						by interacting with a usual web application, user connects to a central server over a network by using a web browser.<br>
-						the entire data and the code of this web application is on the central server that has a central database, therefore each <br>
-						transaction between user and the application, must communicate with this central server on the web.Hoewver in certain<br>
-						situation there could be problems such as the data on the database could be changed, most importantly if an events has to happens once per user such as voting system or money transaction and by having a central database, every
-						information could be hacked or changed or removed and therefore cause various problems in higher scales.<br>
-						not only data are not immune, the source code and logic of the program could also be<br>
-						changed and cause major problems in server and somethimes even damage in economics or leaking the personal information.
-						these are our motivation to build the application on blockchain , where there is no middle man and we do'nt have to
-						simply trust a thid partie. By builing our application on blockchain we let everybody connected to the network
-						to use the application without the data being japordized or the avoiding any changes in the source code.
-
-						<br>
-
-
-						Instead of having a network, a central server, and a database, the blockchain is a network and
-						a database all in one. A blockchain is a peer-to-peer network of computers, called nodes,
-						that share all the data and the code in the network. So, any device that is connected to
-						the blockchain, in in fact a node in the network, and can talk to all the other computer nodes
-						in the network. each nodes has a copy of all the data and the code on the blockchain. There
-						are no more central servers. Just a bunch of computers that talk to one another on the same network.
-
-						<br>
-
-						Instead of a centralized database, all the transaction data that is shared across the nodes
-						in the blockchain is contained in bundles of records called blocks, which are chained together
-						to create the public ledger. This public ledger represents all the data in the blockchain.
-						All the data in the public ledger is secured by cryptographic hashing, and validated by a
-						consensus algorithm. Nodes on the network participate to ensure that all copies of the
-						data distributed across the network are the same. That’s why many applications are build on the
-						blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
-						<br>
-
-						<li>
-							<h5>What happens on the user side?</h5>
-						</li>
-						<br>each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency.
-						Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
-						each transaction could be an action or request from the user like voting or registering or sending information...
-						This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
-						compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction.
-						also reading data from the blockchain is free, but writing to it is not and the user pays with the ether for it.
-					</p>
 					<li>
-						<h5>Advantages: </h5>
+						<h3>What is a Blockchain? </h3>
 					</li>
-					Blockchain being decentralized has some advantages over traditional databases:
+					<p>before we start with the development, we need to undrestand what blockchain is and how it works.<p>
+							<div><p class="indented"> by interacting with a usual web application, user connects to a central server over a network by using a web browser.
+								<br>the entire data and the code of this web application is on the central server that has a central database, therefore each transaction between user and the application, must communicate with this central server on the web.
+								<br>Hoewver in certain situation there could be problems such as the data on the database could be changed, most importantly if an events has to happens once per user such as voting system or money transaction and by having a central database, every information could be hacked or changed or removed and therefore cause various problems in higher scales.
+								<br>
+								<br>not only data are not immune, the source code and logic of the program could also be changed and cause major problems in server and somethimes even damage in economics or leaking the personal information. these are our motivation to build the application on blockchain , where there is no middle man and we do'nt have to simply trust a thid partie.
+								<br>By builing our application on blockchain we let everybody connected to the network to use the application without the data being japordized or the avoiding any changes in the source code. Instead of having a network, a central server, and a database, the blockchain is a network and a database all in one. A blockchain is a peer-to-peer network of computers, called nodes, that share all the data and the code in the network.
+								<br>So, any device that is connected to the blockchain, in in fact a node in the network, and can talk to all the other computer nodes in the network. each nodes has a copy of all the data and the code on the blockchain. There are no more central servers. Just a bunch of computers that talk to one another on the same network. Instead of a centralized database, all the transaction data that is shared across the nodes in the blockchain is contained in bundles of records called
+								<br>
+								<br>blocks, which are chained together to create the public ledger. This public ledger represents all the data in the blockchain. All the data in the public ledger is secured by cryptographic hashing, and validated by a consensus algorithm. Nodes on the network participate to ensure that all copies of the data distributed across the network are the same.
+								 <br>That’s why many applications are build on the blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
+							</p></div>
+							<li>
+								<h5>What happens on the user side?</h5>
+							</li>
+							<p>each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency.<br>
+								Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
+								each transaction could be an action or request from the user like voting or registering or sending information...<br><br>
+								This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
+								compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction.<br>
+								also reading data from the blockchain is free, but writing to it is not and the user pays with the ether for it.
+							</p>
+							<li>
+								<h5>Advantages: </h5>
+							</li>
+							Blockchain being decentralized has some advantages over traditional databases:
+							<br>
+							<ol>
+								<li> Manipulation of data is very difficult since each node has a copy of the Blockchain.</li><br>
+								<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network.</li><br>
+								<li>since the blockchain-based data is distributed across a large network of computers, it is
+									saferagainst data loss or any possible infrastructure failures, for example if a node is
+									currupted other nodes have the copy of the blockchain.</li><br>
+								<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage.</li><br>
+							</ol>
+							<li>
+								<h5>Disdvantages: </h5>
+							</li>
 
-					<ol>
-						<li> Manipulation of data is very difficult since each node has a copy of the Blockchain.</li><br>
-						<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network.</li><br>
-						<li>since the blockchain-based data is distributed across a large network of computers, it is
-							saferagainst data loss or any possible infrastructure failures, for example if a node is
-							currupted other nodes have the copy of the blockchain.</li><br>
-						<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage.</li><br>
-					</ol>
-					<li><h5>Disdvantages: </h5></li>
+							Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
+							but there also some disadvatages and needs to be take into consideration while working with it.<br>
+							<br>
+							<ol>
+								<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
+									also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
+									delay in application and costs more that it should.</li><br>
 
-					Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
-					but there also some disadvatages and needs to be take into consideration while working with it.<br>
+								<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
+									therefore the network is not completly immune to attacks.</li><br>
 
-					<ol>
-						<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
-							also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
-							delay in application and costs more that it should.</li><br>
+								<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
+									even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
+									no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
+								<br>
 
-						<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
-							therefore the network is not completly immune to attacks.</li><br>
-
-						<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
-							even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
-							no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
-						<br>
-
-						<li>Access control in a public chain, as we know there are two types of chain, public and private and in
-							public chain each user has full access to the data written on the blockchain,
-							which means that each user can see everything on the blockchain, this might help for the Transparency
-							but in some cases people are using private chain and allow only authorized member to be a part of it.
-						</li>
-						<br>
-						<li>The risk of “forks.” forking a blockchain has happended over the years and it's not
-							always a negative situation but by forking the chain, people could change the protocol.
-						</li><br>
-					</ol>
-					<span></span>
-					<li><h5>What to write on the blockchain?</h5></li>
-					As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
-					because once an information is saved, all other nodes are getting the information,
-					thus deleting the information is nearly impossible, also writing on the blockchain costs time
-					and money
-					therefore only the most important information should be written.
-					we can use a databank on the backed side to save the the rest of the information.
-					<br>
+								<li>Access control in a public chain, as we know there are two types of chain, public and private and in
+									public chain each user has full access to the data written on the blockchain,
+									which means that each user can see everything on the blockchain, this might help for the Transparency
+									but in some cases people are using private chain and allow only authorized member to be a part of it.
+								</li>
+								<br>
+								<li>The risk of “forks.” forking a blockchain has happended over the years and it's not
+									always a negative situation but by forking the chain, people could change the protocol.
+								</li><br>
+							</ol>
+							<span></span>
+							<li>
+								<h5>What to write on the blockchain?</h5>
+							</li>
+							As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
+							because once an information is saved, all other nodes are getting the information,
+							thus deleting the information is nearly impossible, also writing on the blockchain costs time
+							and money
+							therefore only the most important information should be written.
+							we can use a databank on the backed side to save the the rest of the information.
+							<br>
 				</ul>
 				<ul>
-					<li><h3>What is a smart contract? </h3></li>
+					<li>
+						<h3>What is a smart contract? </h3>
+					</li>
 
-					<li><h5> multiple smart contract? </h5></li>
-					<li><h5> redeploy smart contract and it's side affects </h5></li>
-					<li><h5> transparency of smart contract, pro and cons:</h5> </li>
-					<li><h5> inheritance?</h5> </li>
+					<li>
+						<h5> multiple smart contract? </h5>
+					</li>
+					<li>
+						<h5> redeploy smart contract and it's side affects </h5>
+					</li>
+					<li>
+						<h5> transparency of smart contract, pro and cons:</h5>
+					</li>
+					<li>
+						<h5> inheritance?</h5>
+					</li>
 
 			</div>
 			<div id="Create" class="tabcontent">
