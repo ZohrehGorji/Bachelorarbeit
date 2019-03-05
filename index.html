@@ -48,7 +48,7 @@
 						<p> when we write the smart contract and deploy it on the remix we c an copy the ABI from the remix and save it in a file called contract.jason, we also copy the address of the deployed contact in our jason file, incase we need to use it later, since we deployed on the ropsten testnet, we can find all transaction done by this contract on https://ropsten.etherscan.io/address/ + smartContractAddress.
 							then we need another file called networkinfo.json ,which we'll be using later, what we save in this file is our infura account information
 							public key adress and the private key address.<p>
-								<img src="images/remixAbi.png" alt="GitHub" width="550" height="500"> 
+								<img src="images/remixABI.png" alt="GitHub" width="550" height="500"> 
 								<li> Step 2: Writing the Frontent: </li>
 								<p>in the frontend, we keep it very simple :</p>
 								<img src="images/frontend.png" alt="GitHub" width="700" height="500"> 
@@ -265,7 +265,7 @@
 					since we needs accounts to test our smart contract , one for sender and one or many other
 					for receiver we lunch either testrpc or ganache
 					, we just have to be sure that the local port is the same as our config file in truffle.
-					
+
 				</p>
 				<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
 			</ol>
@@ -274,7 +274,7 @@
 			<div><h3>Deploy</h3>
 				<p>In this section, we see how to deploy the dApp on the test-net:
 				however there are many possibility such as deploying directly from truffle or from remix or by using web3.js</p>
-				
+
 				<h4>TESTNET vs Mainnet</h4>
 				The only difference between a Testnet and Ethereum mainnet is that the mainnet is used for real world transactions
 				that have real world values, however the risk of deploying directly on the mainnet is a lot therefore usually we test on a testnet like Ropsten, Rinkeby, or Kovan and after making sure that the contract works exactly as it is supposed to, then we deploy it on the mainnet.
@@ -296,7 +296,7 @@
 				</p>
 				<li>Step 2: Choosing the test environment and connect: </li>
 				<p>in this step we choose our Testnet which is Ropsten, we can ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/<p>
-					
+
 					<li>Step 3: Deploy smart contract to the ethereum TESTNET:</li>
 					<p>
 						by going back to the Remix IDE,where we wrote our code, once the metamask is connected we can deploy the smart contract by making the transaction through the ropsten testnet.
