@@ -1,27 +1,62 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<!-- Optimizely -->
-		<title>A Simple Guide To Create a DApp </title>
-		<meta name="description" content="dapp step-by-step guide.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="https://github.com/ccampbell/rainbow/blob/master/themes/css/solarized-light.css">
-		<script src="rainbow-custom.min.js"></script>
-	</head>
-	<body>
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">
+			<!-- Optimizely -->
+			<title>A Simple Guide To Create a DApp </title>
+			<meta name="description" content="dapp step-by-step guide.">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+			<link rel="stylesheet" type="text/css" href="https://github.com/ccampbell/rainbow/blob/master/themes/css/solarized-light.css">
+			<script src="rainbow-custom.min.js"></script>
+		</head>
+		<body>
+			<div>
+				<p> How to create a static web page and run it on local host: </p>
+				<ul>
+					<li> Step 1: Writing the smart contact: </li>
+					<p> when we write the smart contract and deploy it on the remix we c an copy the ABI from the remix and save it in a file called contract.jason, we also copy the address of the deployed contact in our jason file, incase we need to use it later, since we deployed on the ropsten testnet, we can find all transaction done by this contract on https://ropsten.etherscan.io/address/ + smartContractAddress.
+						then we need another file called networkinfo.json ,which we'll be using later, what we save in this file is our infura account information
+						public key adress and the private key address.<p>
+							<img src="images/remixAbi.png" alt="GitHub" width="550" height="500"> 
+							<li> Step 2: Writing the smart Frontent: </li>
+							<p>in the frontend, we keep it very simple :</p>
+							<img src="images/frontend.png" alt="GitHub" width="700" height="500"> 
+							<br>
+							<li> Step 3: Interact with the smart contract through web3.js: </li>
+							<p> This part may be complicated because the lack of Documentation on web3.js.
+							first, we create a server.js file and add Required node-modules such as:</p>
+							<img src="images/modules.png" alt="GitHub" width="350" height="100"> 
+							<p>then we add the path of those 2 jason file that contains our ABI and our networkInfo. </p>
+							<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
+							<p>
+								then we save our needed information from theses two files in seprate variable such as const abi or const infura-url, by simply calling :"const abi= contractinfo.abi".
+								in the next step we create new instance of web3 and set the provider:
+								<div><code>const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:port'))<br>
+								const contract = new web3.eth.Contract(abi, contractAddress); <br>
+									let app = express(); <br>
+									http.Server(app).listen(80); <br>
+									app.get('/', function(req, res) {<br>
+									res.sendFile('index.html',  {root:__dirname }); <br>
+								}); <br>
+								</code></div>
 
-						<p>
-							<ul>
-								<li>Step 1: After deploying the contract, you have a file with api and address of the contract</li>
-								<li>Step 2: Now we can create a static page that runs on the local host.</li>
-								<li>Step 3: We will be writing a JavaScript file and listen to event, we make a transaction.</li>
-								<li>Step 4: In order to list the events, we will be using socket.io</li>
-								<li>Step 5: Possible frameworks for this tutorial react, Angular JS and …</li>
-								<li>Lastly : At the end we have a contract on blockchain and we can make transaction and we can see a list of our transaction on our website on local host.</li>
-							</ul>
-						</p>
-	</body>
-</html>
+
+							</p>
+
+
+						</ul>
+				<!--p>
+					<ul>
+						<li>Step 1: After deploying the contract, you have a file with api and address of the contract</li>
+						<li>Step 2: Now we can create a static page that runs on the local host.</li>
+						<li>Step 3: We will be writing a JavaScript file and listen to event, we make a transaction.</li>
+						<li>Step 4: In order to list the events, we will be using socket.io</li>
+						<li>Step 5: Possible frameworks for this tutorial react, Angular JS and …</li>
+						<li>Lastly : At the end we have a contract on blockchain and we can make transaction and we can see a list of our transaction on our website on local host.</li>
+					</ul>
+				</p-->
+			</div>
+		</body>
+		</html>
