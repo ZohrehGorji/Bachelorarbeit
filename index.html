@@ -210,7 +210,9 @@
 			</div>
 			<div id="Interact" class="tabcontent">
 				<div>
-					<p>  Interact with the smart contract: How to create a static web page and run it on local host: </p>
+					<p> Interact with the smart contract: How to create a static web page and run it on local host: 
+					in this section we see how to make transactions on the Ethereum blockchain 
+					   without using any wallet or extension like Mist or Metamask, this could be very helpful, because then our Dapp can be accesed from anybody and doesen't require metamask.</p>
 					<ul>
 						<li> Step 1: Writing the smart contact: </li>
 						<p> when we write the smart contract and deploy it on the remix we c an copy the ABI from the remix and save it in a file called contract.jason, we also copy the address of the deployed contact in our jason file, incase we need to use it later, since we deployed on the ropsten testnet, we can find all transaction done by this contract on https://ropsten.etherscan.io/address/ + smartContractAddress.
@@ -238,7 +240,7 @@
 								</ul>
 							</p>
 							<p> This part may be complicated because the lack of Documentation on web3.js.
-							first, we create a server.js file and add Required node-modules such as:</p>
+							first, we create a server.js file and Connect to Infura’s peers and add Required node-modules such as:</p>
 							<img src="images/modules.png" alt="GitHub" width="350" height="100"> 
 							<p>then we add the path of those 2 jason file that contains our ABI and our networkInfo. </p>
 							<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
