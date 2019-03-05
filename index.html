@@ -1,155 +1,191 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<!-- Optimizely -->
-		<title>A Simple Guide To Create a DApp </title>
-		<meta name="description" content="dapp step-by-step guide.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="https://github.com/ccampbell/rainbow/blob/master/themes/css/solarized-light.css">
-		<script src="rainbow-custom.min.js"></script>
-	</head>
-	<body>
-		<h1>A Simple Guide To Create a decentralized Application on the Blockchain (DApp) </h1>
-		<p id="summary">Create, compile, deploy and test a smart contracts on Ethereum + Angular/react</p>
-		<!-- intro below -->
-		<div class="view absolute" id='intro-view'>
-			<div class="center-column">
-				<p class="explain">
-					In this Tutorial, we learn how to create a simple decentlized application
-					by writing a simple smart contract and the proper UI for it, then we use web3 to allow our client-side application to talk to the blockchain,
-					at the end we take a look at two most used frontend frameworks "Angular and react" and see which
-					could be the best possible option while creating a DApp.
-				</p>
-				<p>
-					before we start we need to know what is a blockchain and why and most importantly when should it be used, therefore we
-					look at the pro and cons of using the blockchain to realize blockchain is not always the solution and we need to be sure
-					about the reason that we approache it.
-				</p>
-				<h2></h2>
-				<h2>Content:</h2>
-				<div class="tab">
-					<button class="tablinks" onclick="openCity(event, 'basic')" id="defaultOpen">What is the Blockchain? / Smart contract </button>
-					<button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
-					<button class="tablinks" onclick="openCity(event, 'Deploy')">Deploy</button>
-					<button class="tablinks" onclick="openCity(event, 'reactvsangualr')">Frameworks</button>
-					<button class="tablinks" onclick="openCity(event, 'host')">How to host a blockchain decentralised application? </button>
-					<button class="tablinks" onclick="openCity(event, 'Resources')"> Resources </button>
-					<!--button class="tablinks" onclick="openCity(event, 'Quelle')">Resources</button-->
-				</div>
-				<div id="basic" class="tabcontent">
+<head>
+	<meta charset="utf-8">
+	<!-- Optimizely -->
+	<title>A Simple Guide To Create a DApp </title>
+	<meta name="description" content="dapp step-by-step guide.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://zohrehgorji.github.io/Bachelorarbeit" />
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="https://github.com/ccampbell/rainbow/blob/master/themes/css/solarized-light.css">
+	<script src="rainbow-custom.min.js"></script>
+</head>
+<body>
+	<h1>A Simple Guide To Create a decentralized Application on the Blockchain (DApp) </h1>
+	<p id="summary">Create, compile, deploy and test a smart contracts on Ethereum + Angular/react</p>
+	<!-- intro below -->
+	<div class="view absolute" id='intro-view'>
+		<div class="center-column">
+			<p class="explain">
+				In this Tutorial, we learn how to create a simple decentlized application
+				by writing a simple smart contract and the proper UI for it, then we use web3 to allow our client-side application to talk to the blockchain,
+				at the end we take a look at two most used frontend frameworks "Angular and react" and see which
+				could be the best possible option while creating a DApp.
+			</p>
+			<p>
+				before we start we need to know what is a blockchain and why and most importantly when should it be used, therefore we
+				look at the pro and cons of using the blockchain to realize blockchain is not always the solution and we need to be sure
+				about the reason that we approache it.
+			</p>
+			<h2></h2>
+			<h2>Content:</h2>
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'basic')" id="defaultOpen">What is the Blockchain? / Smart contract </button>
+				<button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
+				<button class="tablinks" onclick="openCity(event, 'Deploy')">Deploy</button>
+				<button class="tablinks" onclick="openCity(event, 'Interact')"> Web3.js </button>
+				<button class="tablinks" onclick="openCity(event, 'reactvsangualr')">Frameworks</button>
+				<button class="tablinks" onclick="openCity(event, 'host')">How to host a blockchain decentralised application? </button>
+				<button class="tablinks" onclick="openCity(event, 'Resources')"> Resources </button>
+				<!--button class="tablinks" onclick="openCity(event, 'Quelle')">Resources</button-->
+			</div>
+			<div id="Interact" class="tabcontent">
+				<div>
+					<p>  Interact with the smart contract: How to create a static web page and run it on local host: </p>
 					<ul>
-						<li>
-							<h3>What is a Blockchain? </h3>
-						</li>
-						<p>before we start with the development, we need to undrestand what blockchain is and how it works.<p>
-							<div>
-								<p class="indented"> by interacting with a usual web application, user connects to a central server over a network by using a web browser.
-									<br>the entire data and the code of this web application is on the central server that has a central database, therefore each transaction between user and the application, must communicate with this central server on the web.
-									<br>Hoewver in certain situation there could be problems such as the data on the database could be changed, most importantly if an event has to happens once per user such as voting system or money transaction and by having a
-									central
-									database, every information could be hacked or changed or removed and therefore cause various problems in higher scales.
-									<br>
-									<br>not only data are not immune, the source code and logic of the program could also be changed and cause major problems in server and somethimes even damage in economics or leaking the personal information. these are our
-									motivation to
-									build the application on blockchain, where there is no middle man and we do'nt have to simply trust a thid partie.
-									<br>By builing our application on blockchain we let everybody connected to the network to use the application without the data being japordized or the avoiding any changes in the source code. Instead of having a network, a central
-									server,
-									and a database, the blockchain is a network and a database all in one. A blockchain is a peer-to-peer network of computers, called nodes, that share all the data and the code in the network.
-									<br>So, any device that is connected to the blockchain, in in fact a node in the network, and can talk to all the other computer nodes in the network. each node has a copy of all the data and the code on the blockchain. There are
-									no more
-									central servers. Just a bunch of computers that talk to one another on the same network. Instead of a centralized database, all the transaction data that is shared across the nodes in the blockchain is contained in bundles of
-									records called
-									<br>
-									<br>blocks, which are chained together to create the public ledger. This public ledger represents all the data in the blockchain. All the data in the public ledger is secured by cryptographic hashing, and validated by a consensus
-									algorithm.
-									Nodes on the network participate to ensure that all copies of the data distributed across the network are the same.
-									<br>That’s why many applications are build on the blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
+						<li> Step 1: Writing the smart contact: </li>
+						<p> when we write the smart contract and deploy it on the remix we c an copy the ABI from the remix and save it in a file called contract.jason, we also copy the address of the deployed contact in our jason file, incase we need to use it later, since we deployed on the ropsten testnet, we can find all transaction done by this contract on https://ropsten.etherscan.io/address/ + smartContractAddress.
+							then we need another file called networkinfo.json ,which we'll be using later, what we save in this file is our infura account information
+							public key adress and the private key address.<p>
+								<img src="images/remixAbi.png" alt="GitHub" width="550" height="500"> 
+								<li> Step 2: Writing the Frontent: </li>
+								<p>in the frontend, we keep it very simple :</p>
+								<img src="images/frontend.png" alt="GitHub" width="700" height="500"> 
+								<br>
+								<li> Step 3: Interact with the smart contract through web3.js: </li>
+								<p> This part may be complicated because the lack of Documentation on web3.js.
+								first, we create a server.js file and add Required node-modules such as:</p>
+								<img src="images/modules.png" alt="GitHub" width="350" height="100"> 
+								<p>then we add the path of those 2 jason file that contains our ABI and our networkInfo. </p>
+								<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
+								<p>
+									then we save our needed information from theses two files in seprate variable such as const abi or const infura-url, by simply calling :"const abi= contractinfo.abi".
 								</p>
-							</div>
-							<li>
-								<h5>What happens on the user side? </h5>
-							</li>
-							<p>each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency. <br>
-								Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
-								each transaction could be an action or request from the user like voting or registering or sending information...<br><br>
-								This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
-								compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction. <br>
-								also reading data from the blockchain is free but writing to it is not and the user pays with the ether for it.
-							</p>
-							<li>
-								<h5>Advantages: </h5>
-							</li>
-							Blockchain being decentralized has some advantages over traditional databases:
-							<br>
-							<ol>
-								<li> Manipulation of data is very difficult since each node has a copy of the Blockchain. </li><br>
-								<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network. </li><br>
-								<li>since the blockchain-based data is distributed across a large network of computers, it is
-									saferagainst data loss or any possible infrastructure failures, for example if a node is
-								currupted other nodes have the copy of the blockchain. </li><br>
-								<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage. </li><br>
-							</ol>
-							<li>
-								<h5>Disdvantages: </h5>
-							</li>
-							Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
-							but there also some disadvatages and needs to be take into consideration while working with it.<br>
-							<br>
-							<ol>
-								<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
-									also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
-								delay in application and costs more that it should.</li><br>
-								<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
-								therefore the network is not completely immune to attacks. </li><br>
-								<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
-									even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
-								no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
-								<br>
-								<li>Access control in a public chain, as we know there are two types of chain, public and private and in
-									public chain each user has full access to the data written on the blockchain,
-									which means that each user can see everything on the blockchain, this might help for the Transparency
-									but in some cases, people are using private chain and allow only authorized member to be a part of it.
-								</li>
-								<br>
-								<li>The risk of “forks.” forking a blockchain has happened over the years and it's not
-									always a negative situation but by forking the chain, people could change the protocol.
-								</li><br>
-							</ol>
-							<span></span>
-							<li>
-								<h5>What to write on the blockchain?</h5>
-							</li>
-							As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
-							because once an information is saved, all other nodes are getting the information,
-							thus, deleting the information is nearly impossible, also writing on the blockchain costs time
-							and money
-							therefore, only the most important information should be written.
-							we can use a databank on the backed side to save the the rest of the information.
-							<br>
-						</ul>
+								<img src="images/variables.png" alt="GitHub" width="500" height="120"> 
+								<p>
+								in the next step we create new instance of web3 and set the provider:</p>
+								<img src="images/web3.png" alt="GitHub" width="500" height="120"> 
+								<p> what we need now is the get function to make the transaction once the button is clicked, in this get function we call the function sendTx(callback) {} in order to make a transaction and register a car in our case.
+
+								</p>
+								<img src="images/get.png" alt="GitHub" width="700" height="300"> 
+								<p>now that everything is set, we can write our send transaction function, which create a transaction once the button is clicked </p>
+								<img src="images/sendTransaction.png" alt="GitHub" width="700" height="450"> 
+							</ul>
+						</div>
+					</div>
+					<div id="basic" class="tabcontent">
 						<ul>
 							<li>
-								<h3>What is a smart contract? </h3>
+								<h3>What is a Blockchain? </h3>
+							</li>
+							<p>before we start with the development, we need to undrestand what blockchain is and how it works.<p>
 								<div>
-									<p class="indented">
-										Bitcoin blockchain is the base of all blockchains. It main goal was peer to peer transfer of value, later on a framework for code execution was introduced by Ethereum Founders.
-										The difference between bitcoin and the Ethereum is the wallet for initiating transactions.
-										Ethereum supports smart contracts.
-										Smart contracts are used in decentralized application that aim for more than a transfer of value.
-										A smart contract is a piece of code deployed in the blockchain node, it is where the logic of the blockchain is written and will be executed from.
-										Execution of a smart contract is initiated by a message embedded in the transaction.
-										Bitcoin and other crypto currencies are requesting simple addition and subtraction.
-										Ethereum enables transaction that can achieve more complicated operations.
-										We can have conditions or authentication and evaluation of specific accounts.
-										Structurally speaking, a smart contract acts same as a class definition in an object-oriented design.
-										A smart contract like any other data structure has data, functions or methods, which could be private or public, we can set variable sate or change it and then ask for the new changed state of a variable.
-										Solidity is the programming language provided by Ethereum, it’s the language of smart contract.
+									<p class="indented"> by interacting with a usual web application, user connects to a central server over a network by using a web browser.
+										<br>the entire data and the code of this web application is on the central server that has a central database, therefore each transaction between user and the application, must communicate with this central server on the web.
+										<br>Hoewver in certain situation there could be problems such as the data on the database could be changed, most importantly if an event has to happens once per user such as voting system or money transaction and by having a
+										central
+										database, every information could be hacked or changed or removed and therefore cause various problems in higher scales.
+										<br>
+										<br>not only data are not immune, the source code and logic of the program could also be changed and cause major problems in server and somethimes even damage in economics or leaking the personal information. these are our
+										motivation to
+										build the application on blockchain, where there is no middle man and we do'nt have to simply trust a thid partie.
+										<br>By builing our application on blockchain we let everybody connected to the network to use the application without the data being japordized or the avoiding any changes in the source code. Instead of having a network, a central
+										server,
+										and a database, the blockchain is a network and a database all in one. A blockchain is a peer-to-peer network of computers, called nodes, that share all the data and the code in the network.
+										<br>So, any device that is connected to the blockchain, in in fact a node in the network, and can talk to all the other computer nodes in the network. each node has a copy of all the data and the code on the blockchain. There are
+										no more
+										central servers. Just a bunch of computers that talk to one another on the same network. Instead of a centralized database, all the transaction data that is shared across the nodes in the blockchain is contained in bundles of
+										records called
+										<br>
+										<br>blocks, which are chained together to create the public ledger. This public ledger represents all the data in the blockchain. All the data in the public ledger is secured by cryptographic hashing, and validated by a consensus
+										algorithm.
+										Nodes on the network participate to ensure that all copies of the data distributed across the network are the same.
+										<br>That’s why many applications are build on the blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
 									</p>
 								</div>
-							</li>
+								<li>
+									<h5>What happens on the user side? </h5>
+								</li>
+								<p class="indented">each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency. <br>
+									Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
+									each transaction could be an action or request from the user like voting or registering or sending information...<br><br>
+									This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
+									compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction. <br>
+									also reading data from the blockchain is free but writing to it is not and the user pays with the ether for it.
+								</p>
+								<li>
+									<h5>Advantages: </h5>
+								</li>
+								Blockchain being decentralized has some advantages over traditional databases:
+								<br>
+								<ol>
+									<li> Manipulation of data is very difficult since each node has a copy of the Blockchain. </li><br>
+									<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network. </li><br>
+									<li>since the blockchain-based data is distributed across a large network of computers, it is
+										saferagainst data loss or any possible infrastructure failures, for example if a node is
+									currupted other nodes have the copy of the blockchain. </li><br>
+									<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage. </li><br>
+								</ol>
+								<li>
+									<h5>Disdvantages: </h5>
+								</li>
+								Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
+								but there also some disadvatages and needs to be take into consideration while working with it.<br>
+								<br>
+								<ol>
+									<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
+										also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
+									delay in application and costs more that it should.</li><br>
+									<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
+									therefore the network is not completely immune to attacks. </li><br>
+									<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
+										even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
+									no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
+									<br>
+									<li>Access control in a public chain, as we know there are two types of chain, public and private and in
+										public chain each user has full access to the data written on the blockchain,
+										which means that each user can see everything on the blockchain, this might help for the Transparency
+										but in some cases, people are using private chain and allow only authorized member to be a part of it.
+									</li>
+									<br>
+									<li>The risk of “forks.” forking a blockchain has happened over the years and it's not
+										always a negative situation but by forking the chain, people could change the protocol.
+									</li><br>
+								</ol>
+								<span></span>
+								<li>
+									<h5>What to write on the blockchain?</h5>
+								</li>
+								As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
+								because once an information is saved, all other nodes are getting the information,
+								thus, deleting the information is nearly impossible, also writing on the blockchain costs time
+								and money
+								therefore, only the most important information should be written.
+								we can use a databank on the backed side to save the the rest of the information.
+								<br>
+							</ul>
+							<ul>
+								<li>
+									<h3>What is a smart contract? </h3>
+									<div>
+										<p class="indented">
+											Bitcoin blockchain is the base of all blockchains. It main goal was peer to peer transfer of value, later on a framework for code execution was introduced by Ethereum Founders.
+											The difference between bitcoin and the Ethereum is the wallet for initiating transactions.
+											Ethereum supports smart contracts.
+											Smart contracts are used in decentralized application that aim for more than a transfer of value.
+											A smart contract is a piece of code deployed in the blockchain node, it is where the logic of the blockchain is written and will be executed from.
+											Execution of a smart contract is initiated by a message embedded in the transaction.
+											Bitcoin and other crypto currencies are requesting simple addition and subtraction.
+											Ethereum enables transaction that can achieve more complicated operations.
+											We can have conditions or authentication and evaluation of specific accounts.
+											Structurally speaking, a smart contract acts same as a class definition in an object-oriented design.
+											A smart contract like any other data structure has data, functions or methods, which could be private or public, we can set variable sate or change it and then ask for the new changed state of a variable.
+											Solidity is the programming language provided by Ethereum, it’s the language of smart contract.
+										</p>
+									</div>
+								</li>
 							<!--li>
 								<h5> multiple smart contract? </h5>
 						</li>
@@ -161,118 +197,118 @@
 						</li>
 						<li>
 								<h5> inheritance? </h5>
-						</li-->
-					</div>
-					<div id="Create" class="tabcontent">
-						<h3> Create the smart contract </h3>
-						<p> In this section we will be covering how to make a smart contract?</p>
-						<ol>
-							<div>
-								<li>Step 1: Write the smart contract in solidity</li>
-								<p>Solidity like any other language has it’s own syntax and there is
-									<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">a documentation page </a>, which
-									will be update once a new version of library is released.
+							</li-->
+						</div>
+						<div id="Create" class="tabcontent">
+							<h3> Create the smart contract </h3>
+							<p> In this section we will be covering how to make a smart contract?</p>
+							<ol>
+								<div>
+									<li>Step 1: Write the smart contract in solidity</li>
+									<p>Solidity like any other language has it’s own syntax and there is
+										<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">a documentation page </a>, which
+										will be update once a new version of library is released.
 									</br> we always start with the
 									<!--code> pragma solidity ^0.4.0;
 									</br>
 									contract SimpleStorage {
-									} </code-->"pragma + version" , since it indicates the version of the solidity language.
-									</br>
-									</br>
-									We usually try to keep the contract short, so we don’t have to re-deploy our contract every time
-									something changes, because re-deploying means changing the address and, in some cases,
-									address of smart contract needs to be stable. Other than that, everything that we
-									write in smart contract will be staying on the blockchain, so we try to keep
-									the private/not important information out of smart contract.
-								</p>
-							</div>
-							<br>
-							<li> Step 2: Test the smart contract in Remix </li>
-							<p>Easiest and the fastest way to test if our contract is functioning
-								and the syntax of our code is correct, is by testing it in remix
-								, remix is “a web browser-based IDE that allows you to write
-								Solidity smart contracts, then deploy and run the smart contract
-								.” [Remix - The Ethereum Wiki] usually when a contract runs on
-								the remix, it means that we can deploy it and know that everything
-								is alright.
-								Remix has 3 type of environments: Javascript VM, Injected provider,
-								or Web3 provider.
-								Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
-								require the use of an external tool.
-								The JavaScript VM mode is convenient because each execution runs in your browser.
-								Thus reloading the page will restart Remix with an empty state.
-							</p>
-							<br>
-							<li> Step 3: Create truffle base project and run either testRPC or ganache</li>
-							<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
-								the right event is emited, we write a test-based application to test our smart contract
-								and we use truffle init project for it.
-								<div><ul>
-									<li><p>Before: install Npm / truffle/testRPC or ganache</p></li>
-									<img src="images/setup.png" alt="GitHub" width="750" height="500">
-									<li> Import smart contract in folder contract:</li>
-									<p style="padding-left: 20px">With truffle init, we get an empty deployable project from truffle and then we have to add
-									our own smart contract in truffle contract folder.</p>
-									<li> Change the truffle.js and write another file for deploy your current contract: </li>
-									<p style="padding-left: 20px">Then we need a migration file for the new contract and in config file we have to establish
-									our information.</p>
-									<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
-									<li> Run truffle compile and test</li>									
-								</ul></div>
-								<br>
-								Once everything is ready we check for truffle migrate and compile and if did deploy and
-								compiled without any problem, then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
-								with solodoty it self.
-								Tests have to be usefull and they have to test our main functionallyit and also if the events
-								are emmited when they should and not emitted
-								when they should not.
-								since we needs accounts to test our smart contract , one for sender and one or many other
-								for receiver we lunch either testrpc or ganache
-								, we just have to be sure that the local port is the same as our config file in truffle.
-								
-							</p>
-						<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
-					</ol>
+								} </code-->"pragma + version" , since it indicates the version of the solidity language.
+							</br>
+						</br>
+						We usually try to keep the contract short, so we don’t have to re-deploy our contract every time
+						something changes, because re-deploying means changing the address and, in some cases,
+						address of smart contract needs to be stable. Other than that, everything that we
+						write in smart contract will be staying on the blockchain, so we try to keep
+						the private/not important information out of smart contract.
+					</p>
 				</div>
-				<div id="Deploy" class="tabcontent">
-					<div><h3>Deploy</h3>
-						<p>In this section, we see how to deploy the dApp on the test-net:
-						however there are many possibility such as deploying directly from truffle or from remix or by using web3.js</p>
-						
-						<h4>TESTNET vs Mainnet</h4>
-						The only difference between a Testnet and Ethereum mainnet is that the mainnet is used for real world transactions
-						that have real world values, however the risk of deploying directly on the mainnet is a lot therefore usually we test on a testnet like Ropsten, Rinkeby, or Kovan and after making sure that the contract works exactly as it is supposed to, then we deploy it on the mainnet.
-						<li> There are various Testnets and each have their own advantages and disadvantages, in this tutorial we choose ropsten, since it has bigger chain size and the ether can be mined, it also is easier. </li>
-					</div>
-					<h3>Deploy directly from REMIX to Ropsten: </h3>
-					<ul>
-						<li>Step 1: Install meta mask</li>
-						<p> before we start we need to install meta-mask</p>
-						<h5>What is the Metasmask? </h5>
-						<p>MetaMask is a browser extension that can be installed from https://metamask.io/.
-							It lets you run your dapp without being part of the Ethereum network as a Ethereum Node.
-							Instead of connecting directly to the Ethereum network, you can connect to another Ethereum Node which is called INFURA and therefore run smart contracts on Infura Node.
-							it also manages the Ethereum wallet, which contains the Ethers that user is willing to use, by using the metamask, user can send and receive Ethers through a dApp.
-							there are other tools similar to meta-mask, but because it’s simplicity meta mask is widely used.
-							<br>
-							<br>
-							<img src="images/how_to_use_metamask4.png" alt="GitHub" width="200" height="300">
-						</p>
-						<li>Step 2: Choosing the test environment and connect: </li>
-						<p>in this step we choose our Testnet which is Ropsten, we can ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/<p>
-							
-							<li>Step 3: Deploy smart contract to the ethereum TESTNET:</li>
-							<p>
-								by going back to the Remix IDE,where we wrote our code, once the metamask is connected we can deploy the smart contract by making the transaction through the ropsten testnet.
-							</p>
-						</ul>
-						<h3>Deploy directly from Truffle to Ropsten: </h3>
+				<br>
+				<li> Step 2: Test the smart contract in Remix </li>
+				<p>Easiest and the fastest way to test if our contract is functioning
+					and the syntax of our code is correct, is by testing it in remix
+					, remix is “a web browser-based IDE that allows you to write
+					Solidity smart contracts, then deploy and run the smart contract
+					.” [Remix - The Ethereum Wiki] usually when a contract runs on
+					the remix, it means that we can deploy it and know that everything
+					is alright.
+					Remix has 3 type of environments: Javascript VM, Injected provider,
+					or Web3 provider.
+					Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
+					require the use of an external tool.
+					The JavaScript VM mode is convenient because each execution runs in your browser.
+					Thus reloading the page will restart Remix with an empty state.
+				</p>
+				<br>
+				<li> Step 3: Create truffle base project and run either testRPC or ganache</li>
+				<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
+					the right event is emited, we write a test-based application to test our smart contract
+					and we use truffle init project for it.
+					<div><ul>
+						<li><p>Before: install Npm / truffle/testRPC or ganache</p></li>
+						<img src="images/setup.png" alt="GitHub" width="750" height="500">
+						<li> Import smart contract in folder contract:</li>
+						<p style="padding-left: 20px">With truffle init, we get an empty deployable project from truffle and then we have to add
+						our own smart contract in truffle contract folder.</p>
+						<li> Change the truffle.js and write another file for deploy your current contract: </li>
+						<p style="padding-left: 20px">Then we need a migration file for the new contract and in config file we have to establish
+						our information.</p>
+						<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
+						<li> Run truffle compile and test</li>									
+					</ul></div>
+					<br>
+					Once everything is ready we check for truffle migrate and compile and if did deploy and
+					compiled without any problem, then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
+					with solodoty it self.
+					Tests have to be usefull and they have to test our main functionallyit and also if the events
+					are emmited when they should and not emitted
+					when they should not.
+					since we needs accounts to test our smart contract , one for sender and one or many other
+					for receiver we lunch either testrpc or ganache
+					, we just have to be sure that the local port is the same as our config file in truffle.
+					
+				</p>
+				<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
+			</ol>
+		</div>
+		<div id="Deploy" class="tabcontent">
+			<div><h3>Deploy</h3>
+				<p>In this section, we see how to deploy the dApp on the test-net:
+				however there are many possibility such as deploying directly from truffle or from remix or by using web3.js</p>
+				
+				<h4>TESTNET vs Mainnet</h4>
+				The only difference between a Testnet and Ethereum mainnet is that the mainnet is used for real world transactions
+				that have real world values, however the risk of deploying directly on the mainnet is a lot therefore usually we test on a testnet like Ropsten, Rinkeby, or Kovan and after making sure that the contract works exactly as it is supposed to, then we deploy it on the mainnet.
+				<li> There are various Testnets and each have their own advantages and disadvantages, in this tutorial we choose ropsten, since it has bigger chain size and the ether can be mined, it also is easier. </li>
+			</div>
+			<h3>Deploy directly from REMIX to Ropsten: </h3>
+			<ul>
+				<li>Step 1: Install meta mask</li>
+				<p> before we start we need to install meta-mask</p>
+				<h5>What is the Metasmask? </h5>
+				<p>MetaMask is a browser extension that can be installed from https://metamask.io/.
+					It lets you run your dapp without being part of the Ethereum network as a Ethereum Node.
+					Instead of connecting directly to the Ethereum network, you can connect to another Ethereum Node which is called INFURA and therefore run smart contracts on Infura Node.
+					it also manages the Ethereum wallet, which contains the Ethers that user is willing to use, by using the metamask, user can send and receive Ethers through a dApp.
+					there are other tools similar to meta-mask, but because it’s simplicity meta mask is widely used.
+					<br>
+					<br>
+					<img src="images/how_to_use_metamask4.png" alt="GitHub" width="200" height="300">
+				</p>
+				<li>Step 2: Choosing the test environment and connect: </li>
+				<p>in this step we choose our Testnet which is Ropsten, we can ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/<p>
+					
+					<li>Step 3: Deploy smart contract to the ethereum TESTNET:</li>
+					<p>
+						by going back to the Remix IDE,where we wrote our code, once the metamask is connected we can deploy the smart contract by making the transaction through the ropsten testnet.
+					</p>
+				</ul>
+						<!--h3>Deploy directly from Truffle to Ropsten: </h3>
 						<ul>
 							<li>Step 1: Install meta mask</li>
 							<li>Step 2: Get API Key from infura.</li>
 						</ul>
 						<h3>Web3.js</h3>
-						<a href="interact.html"> Interact with the smart contract: How to create a static web page and run it on local host:</a>
+						<a href="interact.html"> Interact with the smart contract: How to create a static web page and run it on local host:</a-->
 
 						<!--p>
 							<ul>
@@ -299,153 +335,153 @@
 																								<li></li>
 															</ul>
 						</p>
-				</div-->
-				<div id="reactvsangualr" class="tabcontent">
-					<h3>React/Angualr</h3>
-					<p>in this section we will be comparing two most used JavaScript Frontend frameworks </p>
-					<h3>Why use javascript Frontend Frameworks? </h3>
-					<div>
-						<p>
-							Using a JavaScript fronted framework makes coding easier and faster, instead of writing code from the scratch we can use currently existing libraries, we can also avoid writing the same part over and over.
-							It also helps us to achieve simpler and shorter code, which is helpful by reviewing and debugging, therefore it is more efficient.
-						</p>
-					</div>
-					<p>A comparison between angular and React: </p>
-					<ul>
-						<li>
-							<h4>Angular</h4>
-						</li>
+					</div-->
+					<div id="reactvsangualr" class="tabcontent">
+						<h3>React/Angualr</h3>
+						<p>in this section we will be comparing two most used JavaScript Frontend frameworks </p>
+						<h3>Why use javascript Frontend Frameworks? </h3>
 						<div>
-							<p>Angular is one of the most used javascript Frontend frameworks and it is maintained by Google which is one of the reason that it became very popular.</p>
-							<div>
-								<ul>
-									<h5>Pros: </h5>
-									<li>
-										Two-way data binding: Angular supports data-binding, which makes it easier for developers.
-									The two-way data binding instantly mirrors the changes made to view in the model, which allows the developer to see the result in real time.</li>
-									<br>
-									<li> DOM manipulation: since data-binding in Angular works in both ways, when a change is applied to the model, the developer will be informed, therefore
-									if there is a manipulation in DOM (Document Object Model), the developer will be notified therefore saving time and efforts .</li>
-								</ul>
-								<ul>
-									<h5>Cons: </h5>
-									<li>
-										Divided community: through the years many developers have changed their platform and have been using other frameworks, the reason for it could be the introduction of Angular 2 which caused many developers to rewrite their App to be
-										compatibel with the new version, many however decided to change the framework so they could avoid such problems in the future.
-										<br>
-										<br>
-									</li>
-									<li>Updates: Updating the software is part of software development and many Applications are updated yearly, however Angular updates are more that this and the constant change takes the stability of the platform away, which could
-										cause problem for the developers, it is not easy to code when the platform changes often.
-										<br>
-										<br>
-									</li>
-									<li>Initial load time: This problem is mainly solved now however still affects the older generation of computers and devices,
-										The problem with loading is the time that it takes to render all the pages of the website, which sometimes is overloaded with the DOM manipulation, is longer that usual, which can cause delays in programming.
-										<br>
-									<br> </li>
-									<li>limited official documentation: since the Documentation provided by the platform is very limited, it makes it very difficult for the new comers to get to know the framework and fully use it.
-									However through the years they have tried to make the documentation better but still not easy for the new users to adopt to the platform.</li>
-									<li>
-										<h5>When to use? </h5>
-									</li>
-									<p> There is no specific reason why to use and not to use Angular as each developer has it's own reason, however if you decide to learn the Angular framework, it's better to plan the time for learning and be patient with the new it's
-									Structure.</p>
-								</ul>
-							</div>
+							<p>
+								Using a JavaScript fronted framework makes coding easier and faster, instead of writing code from the scratch we can use currently existing libraries, we can also avoid writing the same part over and over.
+								It also helps us to achieve simpler and shorter code, which is helpful by reviewing and debugging, therefore it is more efficient.
+							</p>
 						</div>
-					</ul>
-					<ul>
-						<li>
-							<h4>React</h4>
-						</li>
-						<div>
-							<p>React is not a framework but a JavaScript library created by Facebook, it is a User Interface (UI) library and a tool for building UI components.One of the reason that React became popular is that the clinet and server side can be rendered
-								togethere,
-							therefore they can work together.</p>
+						<p>A comparison between angular and React: </p>
+						<ul>
+							<li>
+								<h4>Angular</h4>
+							</li>
 							<div>
-								<ul>
-									<h5>Pros: </h5>
-									<li>JSX:(JavaScript XML) which is an XML/ HTML like syntax that is currently used by React.
-										what is does is helps to XML/ HTML like text to be co-exist along with JavaScript react code.
-									Therefore the HTML like text found in JavaScript files can be transformed into standard JavaScript objects.</li><br>
-									<li>Virtual DOM: it is also a node tree which lists elements along with their attributes and content as Objects.
-										a node tree will be created out of the React components by The React render function.
-										This would then update the tree incase the data model is changed through actionsof the users or the system.
-									</li><br>
-									<li>Testability:in React there is state, which is an object that determines how the component are should behave and render.
-										and the user can manipulate and change this state and observ the pussible actions and output of the given state.
-										this functionality helps the user to test throughtfully and debug faster and easier.
-									</li><br>
-									<li>SSR: with Server-Side rendering user can pre-render the initial state of involved react components only at the server side.
-										SSR makes the rendering faster since the browser can start the rendering without waiting for all the
-										JS to be loaded , the reason for it is because the the response of the server will be only html file of the source code , that is ready to be rendered.
-									</li><br>
-									<li>One-Way Data Binding:we said that angular supports two way data binding but reacts supports only
-										one way data binding, which means that the user has full control over everything and there will be no manupulation
-									from system or other users, because data flow only in one way.</li>
-									<br>
-								</ul>
-								<ul>
-									<h5>Cons: </h5>
-									<li>
-										Poor documentation: Same as Angular, Reacts also lack a good documentation, which can brings the new users to difficulty,
-									however reacts is easier to learn and the react community is more active and more populated. </li><br>
-									<li> JSX:We said that Angular has a steep learning curve, reacts might be easier to learn,
-										but the JSX (JavaScript XML) has by itself also a steep learning curve, which brings more difficulty for users and developers.
-										JSX was supposed to be an Advantage of react, which avoid any injection to the code and therefore protect the code.
-										But it comes with complexity that some developers are not encouraging.
-									</li><br>
-									<li> React is Not a MVC: react is only a View library.
-										therefore in order to maintain state and model, developers are using other libraries such as nredux or the new React Hooks API.
-									</li><br>
-									<li>
-										<h5>When to use? </h5>
-										<p>same as for the Angular, using react is only the developer choice, if the time is limited then the reacts is the better option.</p>
-									</li>
-								</ul>
-							</div>
+								<p>Angular is one of the most used javascript Frontend frameworks and it is maintained by Google which is one of the reason that it became very popular.</p>
+								<div>
+									<ul>
+										<h5>Pros: </h5>
+										<li>
+											Two-way data binding: Angular supports data-binding, which makes it easier for developers.
+										The two-way data binding instantly mirrors the changes made to view in the model, which allows the developer to see the result in real time.</li>
+										<br>
+										<li> DOM manipulation: since data-binding in Angular works in both ways, when a change is applied to the model, the developer will be informed, therefore
+										if there is a manipulation in DOM (Document Object Model), the developer will be notified therefore saving time and efforts .</li>
+									</ul>
+									<ul>
+										<h5>Cons: </h5>
+										<li>
+											Divided community: through the years many developers have changed their platform and have been using other frameworks, the reason for it could be the introduction of Angular 2 which caused many developers to rewrite their App to be
+											compatibel with the new version, many however decided to change the framework so they could avoid such problems in the future.
+											<br>
+											<br>
+										</li>
+										<li>Updates: Updating the software is part of software development and many Applications are updated yearly, however Angular updates are more that this and the constant change takes the stability of the platform away, which could
+											cause problem for the developers, it is not easy to code when the platform changes often.
+											<br>
+											<br>
+										</li>
+										<li>Initial load time: This problem is mainly solved now however still affects the older generation of computers and devices,
+											The problem with loading is the time that it takes to render all the pages of the website, which sometimes is overloaded with the DOM manipulation, is longer that usual, which can cause delays in programming.
+											<br>
+											<br> </li>
+											<li>limited official documentation: since the Documentation provided by the platform is very limited, it makes it very difficult for the new comers to get to know the framework and fully use it.
+											However through the years they have tried to make the documentation better but still not easy for the new users to adopt to the platform.</li>
+											<li>
+												<h5>When to use? </h5>
+											</li>
+											<p> There is no specific reason why to use and not to use Angular as each developer has it's own reason, however if you decide to learn the Angular framework, it's better to plan the time for learning and be patient with the new it's
+											Structure.</p>
+										</ul>
+									</div>
+								</div>
+							</ul>
+							<ul>
+								<li>
+									<h4>React</h4>
+								</li>
+								<div>
+									<p>React is not a framework but a JavaScript library created by Facebook, it is a User Interface (UI) library and a tool for building UI components.One of the reason that React became popular is that the clinet and server side can be rendered
+										togethere,
+									therefore they can work together.</p>
+									<div>
+										<ul>
+											<h5>Pros: </h5>
+											<li>JSX:(JavaScript XML) which is an XML/ HTML like syntax that is currently used by React.
+												what is does is helps to XML/ HTML like text to be co-exist along with JavaScript react code.
+											Therefore the HTML like text found in JavaScript files can be transformed into standard JavaScript objects.</li><br>
+											<li>Virtual DOM: it is also a node tree which lists elements along with their attributes and content as Objects.
+												a node tree will be created out of the React components by The React render function.
+												This would then update the tree incase the data model is changed through actionsof the users or the system.
+											</li><br>
+											<li>Testability:in React there is state, which is an object that determines how the component are should behave and render.
+												and the user can manipulate and change this state and observ the pussible actions and output of the given state.
+												this functionality helps the user to test throughtfully and debug faster and easier.
+											</li><br>
+											<li>SSR: with Server-Side rendering user can pre-render the initial state of involved react components only at the server side.
+												SSR makes the rendering faster since the browser can start the rendering without waiting for all the
+												JS to be loaded , the reason for it is because the the response of the server will be only html file of the source code , that is ready to be rendered.
+											</li><br>
+											<li>One-Way Data Binding:we said that angular supports two way data binding but reacts supports only
+												one way data binding, which means that the user has full control over everything and there will be no manupulation
+											from system or other users, because data flow only in one way.</li>
+											<br>
+										</ul>
+										<ul>
+											<h5>Cons: </h5>
+											<li>
+												Poor documentation: Same as Angular, Reacts also lack a good documentation, which can brings the new users to difficulty,
+											however reacts is easier to learn and the react community is more active and more populated. </li><br>
+											<li> JSX:We said that Angular has a steep learning curve, reacts might be easier to learn,
+												but the JSX (JavaScript XML) has by itself also a steep learning curve, which brings more difficulty for users and developers.
+												JSX was supposed to be an Advantage of react, which avoid any injection to the code and therefore protect the code.
+												But it comes with complexity that some developers are not encouraging.
+											</li><br>
+											<li> React is Not a MVC: react is only a View library.
+												therefore in order to maintain state and model, developers are using other libraries such as nredux or the new React Hooks API.
+											</li><br>
+											<li>
+												<h5>When to use? </h5>
+												<p>same as for the Angular, using react is only the developer choice, if the time is limited then the reacts is the better option.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+							<li>* Other options? </li>
+							<p>Ember and Vue are other options, they might not be as popular as react and angular but they each has their Advantages and
+							through the years Vue has gained a lot of attention.</p>
+							<li>* Is it possible to change from a framework to the other? </li>
+							<p>yes, it is possible, however in must cases the entire Application has to be written again in order to be compatible with new Framework,
+							therefore it is better to choose the right framework from the beginning.</p>
 						</div>
-					</ul>
-					<li>* Other options? </li>
-					<p>Ember and Vue are other options, they might not be as popular as react and angular but they each has their Advantages and
-					through the years Vue has gained a lot of attention.</p>
-					<li>* Is it possible to change from a framework to the other? </li>
-					<p>yes, it is possible, however in must cases the entire Application has to be written again in order to be compatible with new Framework,
-					therefore it is better to choose the right framework from the beginning.</p>
-				</div>
-				<div id="host" class="tabcontent">
-					<h3> GitHub pages setup !</h3>
-					<p>In this section, we will be publishing the static website on github so everybody can access it.
-						These steps will guide you through pushing your project into a repository and publishing it.
-						<ol>
-							<img src="images/githubmain.png" alt="GitHub" width="700" height="300">
-							<li> GitHub signup: first of all, you need to create an account in github, if you don't have one already.</li>
-							<br>
-							<img src="images/github_signup.png" alt="github_signup" width="700" height="300">
-							<li> Create a new Repository: you need to create a Repository, the Name could be the name of the project.</li>
-							<br>
-							<img src="images/github_createrepo.png" alt="github_signup" width="600" height="400">
-							<li> pushing the code to the repository. </li>
-							<li> by going to the setting you can see the link to the github page, which is basically username + github+ io +repository name.
-							most importantly the html file needs to be the correct html format. </li>
-						</ol>
-					</p>
-				</div>
-				<script>
-					function openCity(evt, cityName) {
-						var i, tabcontent, tablinks;
-						tabcontent = document.getElementsByClassName("tabcontent");
-						for (i = 0; i < tabcontent.length; i++) {
-							tabcontent[i].style.display = "none";
-						}
-						tablinks = document.getElementsByClassName("tablinks");
-						for (i = 0; i < tablinks.length; i++) {
-							tablinks[i].className = tablinks[i].className.replace(" active", "");
-						}
-						document.getElementById(cityName).style.display = "block";
-						evt.currentTarget.className += " active";
-					}
+						<div id="host" class="tabcontent">
+							<h3> GitHub pages setup !</h3>
+							<p>In this section, we will be publishing the static website on github so everybody can access it.
+								These steps will guide you through pushing your project into a repository and publishing it.
+								<ol>
+									<img src="images/githubmain.png" alt="GitHub" width="700" height="300">
+									<li> GitHub signup: first of all, you need to create an account in github, if you don't have one already.</li>
+									<br>
+									<img src="images/github_signup.png" alt="github_signup" width="700" height="300">
+									<li> Create a new Repository: you need to create a Repository, the Name could be the name of the project.</li>
+									<br>
+									<img src="images/github_createrepo.png" alt="github_signup" width="600" height="400">
+									<li> pushing the code to the repository. </li>
+									<li> by going to the setting you can see the link to the github page, which is basically username + github+ io +repository name.
+									most importantly the html file needs to be the correct html format. </li>
+								</ol>
+							</p>
+						</div>
+						<script>
+							function openCity(evt, cityName) {
+								var i, tabcontent, tablinks;
+								tabcontent = document.getElementsByClassName("tabcontent");
+								for (i = 0; i < tabcontent.length; i++) {
+									tabcontent[i].style.display = "none";
+								}
+								tablinks = document.getElementsByClassName("tablinks");
+								for (i = 0; i < tablinks.length; i++) {
+									tablinks[i].className = tablinks[i].className.replace(" active", "");
+								}
+								document.getElementById(cityName).style.display = "block";
+								evt.currentTarget.className += " active";
+							}
 					// Get the element with id="defaultOpen" and click on it
 					document.getElementById("defaultOpen").click();
 				</script>
@@ -458,7 +494,7 @@
 			</div>
 		</div>
 	</body>
-</html>
+	</html>
 <!--TODO:
 finish 2 last section and upload the pics of code pushing through github desktop and picture of the setting where the user can find the address of the page. */
 -->

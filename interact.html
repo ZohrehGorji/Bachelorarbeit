@@ -32,19 +32,20 @@
 							<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
 							<p>
 								then we save our needed information from theses two files in seprate variable such as const abi or const infura-url, by simply calling :"const abi= contractinfo.abi".
-								in the next step we create new instance of web3 and set the provider:
-								<div><code>const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:port'))<br>
-								const contract = new web3.eth.Contract(abi, contractAddress); <br>
-									let app = express(); <br>
-									http.Server(app).listen(80); <br>
-									app.get('/', function(req, res) {<br>
-									res.sendFile('index.html',  {root:__dirname }); <br>
-								}); <br>
-								</code></div>
-
+							</p>
+							<img src="images/variables.png" alt="GitHub" width="500" height="120"> 
+							<p>
+							in the next step we create new instance of web3 and set the provider:</p>
+							<img src="images/web3.png" alt="GitHub" width="500" height="120"> 
+							<p> what we need now is the get function to make the transaction once the button is clicked, in this get function we call the function sendTx(callback) {} in order to make a transaction and register a car in our case.
 
 							</p>
+							<img src="images/get.png" alt="GitHub" width="700" height="300"> 
+							<p>now that everything is set, we can write our send transaction function, which create a transaction once the button is clicked </p>
+							<img src="images/sendTransaction.png" alt="GitHub" width="700" height="450"> 
 
+
+							
 
 						</ul>
 				<!--p>
