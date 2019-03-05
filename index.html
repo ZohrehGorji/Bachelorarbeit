@@ -19,26 +19,194 @@
 		<div class="center-column">
 			<p class="explain">
 				In this Tutorial, we learn how to create a simple decentlized application
-				by writing a simple smart contract and the proper UI for it, then we use web3 to allow our client-side application to talk to the blockchain,
-				at the end we take a look at two most used frontend frameworks "Angular and react" and see which
+				by writing a simple smart contract and the proper UI for it, then we use web3 to allow our application to talk to the blockchain,
+				at the end we take a look at two most used javaScript Frontend frameworks "Angular and react" and see which
 				could be the best possible option while creating a DApp.
 			</p>
 			<p>
 				before we start we need to know what is a blockchain and why and most importantly when should it be used, therefore we
 				look at the pro and cons of using the blockchain to realize blockchain is not always the solution and we need to be sure
-				about the reason that we approache it.
+				about the reason that we approach it.
 			</p>
 			<h2></h2>
 			<h2>Content:</h2>
 			<div class="tab">
-				<button class="tablinks" onclick="openCity(event, 'basic')" id="defaultOpen">What is the Blockchain? / Smart contract </button>
+				<button class="tablinks" onclick="openCity(event, 'basic')" id="defaultOpen">What is the Blockchain?/Smart contract </button>
 				<button class="tablinks" onclick="openCity(event, 'Create')" id="defaultOpen">Create</button>
 				<button class="tablinks" onclick="openCity(event, 'Deploy')">Deploy</button>
-				<button class="tablinks" onclick="openCity(event, 'Interact')"> Web3.js </button>
+				<button class="tablinks" onclick="openCity(event, 'Interact')">Web3.js </button>
 				<button class="tablinks" onclick="openCity(event, 'reactvsangualr')">Frameworks</button>
 				<button class="tablinks" onclick="openCity(event, 'host')">How to host a blockchain decentralised application? </button>
-				<button class="tablinks" onclick="openCity(event, 'Resources')"> Resources </button>
+				<button class="tablinks" onclick="openCity(event, 'Resources')">Resources </button>
 				<!--button class="tablinks" onclick="openCity(event, 'Quelle')">Resources</button-->
+			</div>
+
+
+			<div id="basic" class="tabcontent">
+				<ul>
+					<li><h3>What is a Blockchain? </h3></li>
+					<p>before we start with the development, we need to undrestand what blockchain is and how it works.<p>
+						<div>
+							<p class="indented"> by interacting with a usual web application, user connects to a central server over a network by using a web browser.
+								<br>the entire data and the code of this web application is on the central server that has a central database, therefore each transaction between user and the application, must communicate with this central server on the web.
+								<br>Hoewver in certain situation there could be problems such as the data on the database could be changed, most importantly if an event has to happens once per user such as voting system or money transaction and by having a
+								central
+								database, every information could be hacked or changed or removed and therefore cause various problems in higher scales.
+								<br>
+								<br>not only data are not immune, the source code and logic of the program could also be changed and cause major problems in server and somethimes even damage in economics or leaking the personal information. these are our
+								motivation to
+								build the application on blockchain, where there is no middle man and we do'nt have to simply trust a thid partie.
+								<br>By builing our application on blockchain we let everybody connected to the network to use the application without the data being japordized or the avoiding any changes in the source code. Instead of having a network, a central
+								server,
+								and a database, the blockchain is a network and a database all in one. A blockchain is a peer-to-peer network of computers, called nodes, that share all the data and the code in the network.
+								<br>So, any device that is connected to the blockchain, in in fact a node in the network, and can talk to all the other computer nodes in the network. each node has a copy of all the data and the code on the blockchain. There are
+								no more
+								central servers. Just a bunch of computers that talk to one another on the same network. Instead of a centralized database, all the transaction data that is shared across the nodes in the blockchain is contained in bundles of
+								records called
+								<br>
+								<br>blocks, which are chained together to create the public ledger. This public ledger represents all the data in the blockchain. All the data in the public ledger is secured by cryptographic hashing, and validated by a consensus
+								algorithm.
+								Nodes on the network participate to ensure that all copies of the data distributed across the network are the same.
+								<br>That’s why many applications are build on the blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
+							</p>
+						</div>
+						<li> <h5>What happens on the user side? </h5> </li>
+						<p class="indented">each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency. <br>
+							Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
+							each transaction could be an action or request from the user like voting or registering or sending information...<br><br>
+							This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
+							compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction. <br>
+							also reading data from the blockchain is free but writing to it is not and the user pays with the ether for it.
+						</p>
+						<li> <h5>Advantages: </h5> </li>
+						Blockchain being decentralized has some advantages over traditional databases:
+						<br>
+						<ol>
+							<li> Manipulation of data is very difficult since each node has a copy of the Blockchain. </li><br>
+							<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network. </li><br>
+							<li>since the blockchain-based data is distributed across a large network of computers, it is
+								saferagainst data loss or any possible infrastructure failures, for example if a node is
+							currupted other nodes have the copy of the blockchain. </li><br>
+							<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage. </li><br>
+						</ol>
+						<li> <h5>Disdvantages: </h5> </li>
+						Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
+						but there also some disadvatages and needs to be take into consideration while working with it.<br>
+						<br>
+						<ol>
+							<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
+								also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
+							delay in application and costs more that it should.</li><br>
+							<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
+							therefore the network is not completely immune to attacks. </li><br>
+							<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
+								even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
+							no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
+							<br>
+							<li>Access control in a public chain, as we know there are two types of chain, public and private and in
+								public chain each user has full access to the data written on the blockchain,
+								which means that each user can see everything on the blockchain, this might help for the Transparency
+								but in some cases, people are using private chain and allow only authorized member to be a part of it.
+							</li>
+							<br>
+							<li>The risk of “forks.” forking a blockchain has happened over the years and it's not
+								always a negative situation but by forking the chain, people could change the protocol.
+							</li><br>
+						</ol>
+						<span></span>
+						<li> <h5>What to write on the blockchain?</h5> </li>
+						<p>As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
+							because once an information is saved, all other nodes are getting the information,
+							thus, deleting the information is nearly impossible, also writing on the blockchain costs time
+							and money
+							therefore, only the most important information should be written.
+							we can use a databank on the backed side to save the the rest of the information.
+						</p>
+						<br>
+					</ul>
+					<ul>
+						<li>
+							<h3>What is a smart contract? </h3>
+							<div>
+								<p class="indented">
+									Bitcoin blockchain is the base of all blockchains. It main goal was peer to peer transfer of value, later on a framework for code execution was introduced by Ethereum Founders.
+									The difference between bitcoin and the Ethereum is the wallet for initiating transactions.
+									Ethereum supports smart contracts.
+									Smart contracts are used in decentralized application that aim for more than a transfer of value.
+									A smart contract is a piece of code deployed in the blockchain node, it is where the logic of the blockchain is written and will be executed from.
+									Execution of a smart contract is initiated by a message embedded in the transaction.
+									Bitcoin and other crypto currencies are requesting simple addition and subtraction.
+									Ethereum enables transaction that can achieve more complicated operations.
+									We can have conditions or authentication and evaluation of specific accounts.
+									Structurally speaking, a smart contract acts same as a class definition in an object-oriented design.
+									A smart contract like any other data structure has data, functions or methods, which could be private or public, we can set variable sate or change it and then ask for the new changed state of a variable.
+									Solidity is the programming language provided by Ethereum, it’s the language of smart contract.
+								</p>
+							</div>
+						</li>
+					</div>
+					<div id="Create" class="tabcontent">
+						<h3> Create the smart contract </h3>
+						<p> In this section we will be covering how to make a smart contract?</p>
+						<ol>
+							<div> <li>Step 1: Write the smart contract in solidity</li>
+								<p>Solidity like any other language has it’s own syntax and there is
+									<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">a documentation page </a>, whichwill be update once a new version of library is released.
+								</br> we always start with the "pragma + version" , since it indicates the version of the solidity language.
+							</br>We usually try to keep the contract short, so we don’t have to re-deploy our contract every time
+							something changes, because re-deploying means changing the address and, in some cases,
+							address of smart contract needs to be stable. Other than that, everything that we
+							write in smart contract will be staying on the blockchain, so we try to keep
+							the private/not important information out of smart contract.
+						</p>
+					</div>
+					<br>
+					<li> Step 2: Test the smart contract in Remix </li>
+					<p>Easiest and the fastest way to test if our contract is functioning
+						and the syntax of our code is correct, is by testing it in remix
+						, remix is “a web browser-based IDE that allows you to write
+						Solidity smart contracts, then deploy and run the smart contract
+						.” [Remix - The Ethereum Wiki] usually when a contract runs on
+						the remix, it means that we can deploy it and know that everything
+						is alright.
+						Remix has 3 type of environments: Javascript VM, Injected provider,
+						or Web3 provider.
+						Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
+						require the use of an external tool.
+						The JavaScript VM mode is convenient because each execution runs in your browser.
+						Thus reloading the page will restart Remix with an empty state.
+					</p>
+					<br>
+					<li> Step 3: Create truffle base project and run either testRPC or ganache</li>
+					<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
+						the right event is emited, we write a test-based application to test our smart contract
+						and we use truffle init project for it.
+						<div><ul>
+							<li><p>Before: install Npm / truffle/testRPC or ganache</p></li>
+							<img src="images/setup.png" alt="GitHub" width="750" height="500">
+							<li> Import smart contract in folder contract:</li>
+							<p style="padding-left: 20px">With truffle init, we get an empty deployable project from truffle and then we have to add
+							our own smart contract in truffle contract folder.</p>
+							<li> Change the truffle.js and write another file for deploy your current contract: </li>
+							<p style="padding-left: 20px">Then we need a migration file for the new contract and in config file we have to establish
+							our information.</p>
+							<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
+							<li> Run truffle compile and test</li>									
+						</ul></div>
+						<br>
+						Once everything is ready we check for truffle migrate and compile and if did deploy and
+						compiled without any problem, then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
+						with solodoty it self.
+						Tests have to be usefull and they have to test our main functionallyit and also if the events
+						are emmited when they should and not emitted
+						when they should not.
+						since we needs accounts to test our smart contract , one for sender and one or many other
+						for receiver we lunch either testrpc or ganache
+						, we just have to be sure that the local port is the same as our config file in truffle.
+
+					</p>
+					<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
+				</ol>
 			</div>
 			<div id="Interact" class="tabcontent">
 				<div>
@@ -47,295 +215,88 @@
 						<li> Step 1: Writing the smart contact: </li>
 						<p> when we write the smart contract and deploy it on the remix we c an copy the ABI from the remix and save it in a file called contract.jason, we also copy the address of the deployed contact in our jason file, incase we need to use it later, since we deployed on the ropsten testnet, we can find all transaction done by this contract on https://ropsten.etherscan.io/address/ + smartContractAddress.
 							then we need another file called networkinfo.json ,which we'll be using later, what we save in this file is our infura account information
-							public key adress and the private key address.<p>
+							public key adress and the private key address.
+							<p>
 								<img src="images/remixABI.png" alt="GitHub" width="550" height="500"> 
 								<li> Step 2: Writing the Frontent: </li>
 								<p>in the frontend, we keep it very simple :</p>
 								<img src="images/frontend.png" alt="GitHub" width="700" height="500"> 
 								<br>
 								<li> Step 3: Interact with the smart contract through web3.js: </li>
-								<p> This part may be complicated because the lack of Documentation on web3.js.
-								first, we create a server.js file and add Required node-modules such as:</p>
-								<img src="images/modules.png" alt="GitHub" width="350" height="100"> 
-								<p>then we add the path of those 2 jason file that contains our ABI and our networkInfo. </p>
-								<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
-								<p>
-									then we save our needed information from theses two files in seprate variable such as const abi or const infura-url, by simply calling :"const abi= contractinfo.abi".
-								</p>
-								<img src="images/variables.png" alt="GitHub" width="500" height="120"> 
-								<p>
-								in the next step we create new instance of web3 and set the provider:</p>
-								<img src="images/web3.png" alt="GitHub" width="500" height="120"> 
-								<p> what we need now is the get function to make the transaction once the button is clicked, in this get function we call the function sendTx(callback) {} in order to make a transaction and register a car in our case.
+								<p> <ul>
+									<li>Requirements: </li>
 
-								</p>
-								<img src="images/get.png" alt="GitHub" width="700" height="300"> 
-								<p>now that everything is set, we can write our send transaction function, which create a transaction once the button is clicked </p>
-								<img src="images/sendTransaction.png" alt="GitHub" width="700" height="450"> 
-							</ul>
-						</div>
-					</div>
-					<div id="basic" class="tabcontent">
-						<ul>
-							<li>
-								<h3>What is a Blockchain? </h3>
-							</li>
-							<p>before we start with the development, we need to undrestand what blockchain is and how it works.<p>
-								<div>
-									<p class="indented"> by interacting with a usual web application, user connects to a central server over a network by using a web browser.
-										<br>the entire data and the code of this web application is on the central server that has a central database, therefore each transaction between user and the application, must communicate with this central server on the web.
-										<br>Hoewver in certain situation there could be problems such as the data on the database could be changed, most importantly if an event has to happens once per user such as voting system or money transaction and by having a
-										central
-										database, every information could be hacked or changed or removed and therefore cause various problems in higher scales.
-										<br>
-										<br>not only data are not immune, the source code and logic of the program could also be changed and cause major problems in server and somethimes even damage in economics or leaking the personal information. these are our
-										motivation to
-										build the application on blockchain, where there is no middle man and we do'nt have to simply trust a thid partie.
-										<br>By builing our application on blockchain we let everybody connected to the network to use the application without the data being japordized or the avoiding any changes in the source code. Instead of having a network, a central
-										server,
-										and a database, the blockchain is a network and a database all in one. A blockchain is a peer-to-peer network of computers, called nodes, that share all the data and the code in the network.
-										<br>So, any device that is connected to the blockchain, in in fact a node in the network, and can talk to all the other computer nodes in the network. each node has a copy of all the data and the code on the blockchain. There are
-										no more
-										central servers. Just a bunch of computers that talk to one another on the same network. Instead of a centralized database, all the transaction data that is shared across the nodes in the blockchain is contained in bundles of
-										records called
-										<br>
-										<br>blocks, which are chained together to create the public ledger. This public ledger represents all the data in the blockchain. All the data in the public ledger is secured by cryptographic hashing, and validated by a consensus
-										algorithm.
-										Nodes on the network participate to ensure that all copies of the data distributed across the network are the same.
-										<br>That’s why many applications are build on the blockchain, by doing so they can ensure that each action done by user was counted, and that it did not change.
+									<p> >node.js
+										>python (v2.7.15)
 									</p>
-								</div>
-								<li>
-									<h5>What happens on the user side? </h5>
-								</li>
-								<p class="indented">each user needs an account with a wallet address with some Ether, Ethereum's cryptocurrency. <br>
-									Once they connect to the network, they pay a small transaction fee to write this transaction to the blockchain,
-									each transaction could be an action or request from the user like voting or registering or sending information...<br><br>
-									This transaction fee is called “gas”. Whenever an action is done, some of the nodes on the network, called miners,
-									compete to complete this transaction. The miner who completes this transaction is awarded the Ether that the user has paid for the transaction. <br>
-									also reading data from the blockchain is free but writing to it is not and the user pays with the ether for it.
-								</p>
-								<li>
-									<h5>Advantages: </h5>
-								</li>
-								Blockchain being decentralized has some advantages over traditional databases:
-								<br>
-								<ol>
-									<li> Manipulation of data is very difficult since each node has a copy of the Blockchain. </li><br>
-									<li>Transparency is one major advantage of the Blockchain-based data, which gives the user maximum level of trust and confidence in network. </li><br>
-									<li>since the blockchain-based data is distributed across a large network of computers, it is
-										saferagainst data loss or any possible infrastructure failures, for example if a node is
-									currupted other nodes have the copy of the blockchain. </li><br>
-									<li>data bieng immune to erase or undone, however this could be an advantage and sometimes a disadvantage. </li><br>
-								</ol>
-								<li>
-									<h5>Disdvantages: </h5>
-								</li>
-								Blockchain may be able to solve so many problem with it's two major advantages such as transparency and immune to manipulations,
-								but there also some disadvatages and needs to be take into consideration while working with it.<br>
-								<br>
-								<ol>
-									<li>Transaction delays and fees, it usually takes a long time to for transactions to be registered.
-										also each transaction costs and therefore it's not wise to write everything on the blockchain because it can cause
-									delay in application and costs more that it should.</li><br>
-									<li>Security vulnerabilities. over the years they have found some security vulnerabilities to attack the blockchain,
-									therefore the network is not completely immune to attacks. </li><br>
-									<li>We said transparency is one major advantages of the but even Blockchain can not guarantee a full transparency.
-										even if they have moved their data on the blockchain, there could be part of the system running on the backend application where
-									no user is able to see and therefore the transparency of the blockchain is not fully and it depends on the each system.</li>
-									<br>
-									<li>Access control in a public chain, as we know there are two types of chain, public and private and in
-										public chain each user has full access to the data written on the blockchain,
-										which means that each user can see everything on the blockchain, this might help for the Transparency
-										but in some cases, people are using private chain and allow only authorized member to be a part of it.
-									</li>
-									<br>
-									<li>The risk of “forks.” forking a blockchain has happened over the years and it's not
-										always a negative situation but by forking the chain, people could change the protocol.
-									</li><br>
-								</ol>
-								<span></span>
-								<li>
-									<h5>What to write on the blockchain?</h5>
-								</li>
-								As we mentioned above, before we save an information on the blockchain, we need to be sure about it,
-								because once an information is saved, all other nodes are getting the information,
-								thus, deleting the information is nearly impossible, also writing on the blockchain costs time
-								and money
-								therefore, only the most important information should be written.
-								we can use a databank on the backed side to save the the rest of the information.
-								<br>
-							</ul>
-							<ul>
-								<li>
-									<h3>What is a smart contract? </h3>
-									<div>
-										<p class="indented">
-											Bitcoin blockchain is the base of all blockchains. It main goal was peer to peer transfer of value, later on a framework for code execution was introduced by Ethereum Founders.
-											The difference between bitcoin and the Ethereum is the wallet for initiating transactions.
-											Ethereum supports smart contracts.
-											Smart contracts are used in decentralized application that aim for more than a transfer of value.
-											A smart contract is a piece of code deployed in the blockchain node, it is where the logic of the blockchain is written and will be executed from.
-											Execution of a smart contract is initiated by a message embedded in the transaction.
-											Bitcoin and other crypto currencies are requesting simple addition and subtraction.
-											Ethereum enables transaction that can achieve more complicated operations.
-											We can have conditions or authentication and evaluation of specific accounts.
-											Structurally speaking, a smart contract acts same as a class definition in an object-oriented design.
-											A smart contract like any other data structure has data, functions or methods, which could be private or public, we can set variable sate or change it and then ask for the new changed state of a variable.
-											Solidity is the programming language provided by Ethereum, it’s the language of smart contract.
-										</p>
-									</div>
-								</li>
-							<!--li>
-								<h5> multiple smart contract? </h5>
-						</li>
-						<li>
-								<h5> redeploy smart contract and it's side affects </h5>
-						</li>
-						<li>
-								<h5> transparency of smart contract, pro and cons:</h5>
-						</li>
-						<li>
-								<h5> inheritance? </h5>
-							</li-->
-						</div>
-						<div id="Create" class="tabcontent">
-							<h3> Create the smart contract </h3>
-							<p> In this section we will be covering how to make a smart contract?</p>
-							<ol>
-								<div>
-									<li>Step 1: Write the smart contract in solidity</li>
-									<p>Solidity like any other language has it’s own syntax and there is
-										<a href="https://solidity.readthedocs.io/en/v0.4.25/introduction-to-smart-contracts.html">a documentation page </a>, which
-										will be update once a new version of library is released.
-									</br> we always start with the
-									<!--code> pragma solidity ^0.4.0;
-									</br>
-									contract SimpleStorage {
-								} </code-->"pragma + version" , since it indicates the version of the solidity language.
-							</br>
-						</br>
-						We usually try to keep the contract short, so we don’t have to re-deploy our contract every time
-						something changes, because re-deploying means changing the address and, in some cases,
-						address of smart contract needs to be stable. Other than that, everything that we
-						write in smart contract will be staying on the blockchain, so we try to keep
-						the private/not important information out of smart contract.
-					</p>
-				</div>
-				<br>
-				<li> Step 2: Test the smart contract in Remix </li>
-				<p>Easiest and the fastest way to test if our contract is functioning
-					and the syntax of our code is correct, is by testing it in remix
-					, remix is “a web browser-based IDE that allows you to write
-					Solidity smart contracts, then deploy and run the smart contract
-					.” [Remix - The Ethereum Wiki] usually when a contract runs on
-					the remix, it means that we can deploy it and know that everything
-					is alright.
-					Remix has 3 type of environments: Javascript VM, Injected provider,
-					or Web3 provider.
-					Both Web3 provider (Ethereum node) and Injected provider (Mist or Metamask)
-					require the use of an external tool.
-					The JavaScript VM mode is convenient because each execution runs in your browser.
-					Thus reloading the page will restart Remix with an empty state.
-				</p>
-				<br>
-				<li> Step 3: Create truffle base project and run either testRPC or ganache</li>
-				<p>In order to make sure that our smart contract does exactly as it is sopposed to and checking if
-					the right event is emited, we write a test-based application to test our smart contract
-					and we use truffle init project for it.
-					<div><ul>
-						<li><p>Before: install Npm / truffle/testRPC or ganache</p></li>
-						<img src="images/setup.png" alt="GitHub" width="750" height="500">
-						<li> Import smart contract in folder contract:</li>
-						<p style="padding-left: 20px">With truffle init, we get an empty deployable project from truffle and then we have to add
-						our own smart contract in truffle contract folder.</p>
-						<li> Change the truffle.js and write another file for deploy your current contract: </li>
-						<p style="padding-left: 20px">Then we need a migration file for the new contract and in config file we have to establish
-						our information.</p>
-						<li> Create tests either in JavaScript or in solidity and import them in folder test</li>
-						<li> Run truffle compile and test</li>									
-					</ul></div>
-					<br>
-					Once everything is ready we check for truffle migrate and compile and if did deploy and
-					compiled without any problem, then we can start writing our test. Ther are possibility for writing the tests, one is with javascript or
-					with solodoty it self.
-					Tests have to be usefull and they have to test our main functionallyit and also if the events
-					are emmited when they should and not emitted
-					when they should not.
-					since we needs accounts to test our smart contract , one for sender and one or many other
-					for receiver we lunch either testrpc or ganache
-					, we just have to be sure that the local port is the same as our config file in truffle.
+									<li> before installations: </li>
 
-				</p>
-				<li> OPTIONAL: create the frontend and use GitHub pages to upload the code and the contract</li>
-			</ol>
-		</div>
-		<div id="Deploy" class="tabcontent">
-			<div><h3>Deploy</h3>
-				<p>In this section, we see how to deploy the dApp on the test-net:
-				however there are many possibility such as deploying directly from truffle or from remix or by using web3.js</p>
+									<p>>npm install </p>
 
-				<h4>TESTNET vs Mainnet</h4>
-				The only difference between a Testnet and Ethereum mainnet is that the mainnet is used for real world transactions
-				that have real world values, however the risk of deploying directly on the mainnet is a lot therefore usually we test on a testnet like Ropsten, Rinkeby, or Kovan and after making sure that the contract works exactly as it is supposed to, then we deploy it on the mainnet.
-				<li> There are various Testnets and each have their own advantages and disadvantages, in this tutorial we choose ropsten, since it has bigger chain size and the ether can be mined, it also is easier. </li>
-			</div>
-			<h3>Deploy directly from REMIX to Ropsten: </h3>
-			<ul>
-				<li>Step 1: Install meta mask</li>
-				<p> before we start we need to install meta-mask</p>
-				<h5>What is the Metasmask? </h5>
-				<p>MetaMask is a browser extension that can be installed from https://metamask.io/.
-					It lets you run your dapp without being part of the Ethereum network as a Ethereum Node.
-					Instead of connecting directly to the Ethereum network, you can connect to another Ethereum Node which is called INFURA and therefore run smart contracts on Infura Node.
-					it also manages the Ethereum wallet, which contains the Ethers that user is willing to use, by using the metamask, user can send and receive Ethers through a dApp.
-					there are other tools similar to meta-mask, but because it’s simplicity meta mask is widely used.
-					<br>
-					<br>
-					<img src="images/how_to_use_metamask4.png" alt="GitHub" width="200" height="300">
-				</p>
-				<li>Step 2: Choosing the test environment and connect: </li>
-				<p>in this step we choose our Testnet which is Ropsten, we can ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/<p>
+									<li> the static page can be accessed on http://localhost:80/</li>
+									<p> first call >npm start in consule or cmd .</p>
+								</ul>
+							</p>
+							<p> This part may be complicated because the lack of Documentation on web3.js.
+							first, we create a server.js file and add Required node-modules such as:</p>
+							<img src="images/modules.png" alt="GitHub" width="350" height="100"> 
+							<p>then we add the path of those 2 jason file that contains our ABI and our networkInfo. </p>
+							<img src="images/configFiles.png" alt="GitHub" width="650" height="150">
+							<p>
+								then we save our needed information from theses two files in seprate variable such as const abi or const infura-url, by simply calling :"const abi= contractinfo.abi".
+							</p>
+							<img src="images/variables.png" alt="GitHub" width="500" height="120"> 
+							<p>
+							in the next step we create new instance of web3 and set the provider:</p>
+							<img src="images/web3.png" alt="GitHub" width="500" height="120"> 
+							<p> what we need now is the get function to make the transaction once the button is clicked, in this get function we call the function sendTx(callback) {} in order to make a transaction and register a car in our case.
 
-					<li>Step 3: Deploy smart contract to the ethereum TESTNET:</li>
-					<p>
-						by going back to the Remix IDE,where we wrote our code, once the metamask is connected we can deploy the smart contract by making the transaction through the ropsten testnet.
-					</p>
-				</ul>
-						<!--h3>Deploy directly from Truffle to Ropsten: </h3>
-						<ul>
-							<li>Step 1: Install meta mask</li>
-							<li>Step 2: Get API Key from infura.</li>
+							</p>
+							<img src="images/get.png" alt="GitHub" width="700" height="300"> 
+							<p>now that everything is set, we can write our send transaction function, which create a transaction once the button is clicked </p>
+							<img src="images/sendTransaction.png" alt="GitHub" width="700" height="450"> 
 						</ul>
-						<h3>Web3.js</h3>
-						<a href="interact.html"> Interact with the smart contract: How to create a static web page and run it on local host:</a-->
+					</div>
+				</div>
 
-						<!--p>
-							<ul>
-								<li>Step 1: After deploying the contract, you have a file with api and address of the contract</li>
-								<li>Step 2: Now we can create a static page that runs on the local host.</li>
-								<li>Step 3: We will be writing a JavaScript file and listen to event, we make a transaction.</li>
-								<li>Step 4: In order to list the events, we will be using socket.io</li>
-								<li>Step 5: Possible frameworks for this tutorial react, Angular JS and …</li>
-								<li>Lastly : At the end we have a contract on blockchain and we can make transaction and we can see a list of our transaction on our website on local host.</li>
-							</ul>
-						</p-->
+
+
+
+				<div id="Deploy" class="tabcontent">
+					<div><h3>Deploy</h3>
+						<p>In this section, we see how to deploy the dApp on the test-net:
+						however there are many possibility such as deploying directly from truffle or from remix or by using web3.js</p>
+
+						<h4>TESTNET vs Mainnet</h4>
+						The only difference between a Testnet and Ethereum mainnet is that the mainnet is used for real world transactions
+						that have real world values, however the risk of deploying directly on the mainnet is a lot therefore usually we test on a testnet like Ropsten, Rinkeby, or Kovan and after making sure that the contract works exactly as it is supposed to, then we deploy it on the mainnet.
+						<li> There are various Testnets and each have their own advantages and disadvantages, in this tutorial we choose ropsten, since it has bigger chain size and the ether can be mined, it also is easier. </li>
 					</div>
-					<div id="Resources" class="tabcontent">
-						<ol>
-							<li><a href="https://solidity.readthedocs.io/en/v0.5.3/">Solidity Documentation</a></li>
-							<li><a href="https://remix.readthedocs.io/en/latest/">Remix Documentation</a></li>
-							<li><a href="https://angular.io/docs">Angular Documentation</a></li>
-							<li><a href="https://reactjs.org/docs/getting-started.html">React Documentation</a></li>
-						</ol>
-					</div>
-					<!--div id="Quelle" class="tabcontent">
-						<p>
-															<ul>
-																								<li></li>
-															</ul>
+					<h3>Deploy directly from REMIX to Ropsten: </h3>
+					<ul>
+						<li>Step 1: Install meta mask</li>
+						<p> before we start we need to install meta-mask</p>
+						<h5>What is the Metasmask? </h5>
+						<p>MetaMask is a browser extension that can be installed from https://metamask.io/.
+							It lets you run your dapp without being part of the Ethereum network as a Ethereum Node.
+							Instead of connecting directly to the Ethereum network, you can connect to another Ethereum Node which is called INFURA and therefore run smart contracts on Infura Node.
+							it also manages the Ethereum wallet, which contains the Ethers that user is willing to use, by using the metamask, user can send and receive Ethers through a dApp.
+							there are other tools similar to meta-mask, but because it’s simplicity meta mask is widely used.
+							<br>
+							<br>
+							<img src="images/how_to_use_metamask4.png" alt="GitHub" width="200" height="300">
 						</p>
-					</div-->
+						<li>Step 2: Choosing the test environment and connect: </li>
+						<p>in this step we choose our Testnet which is Ropsten, we can ask for test ether: https://faucet.ropsten.be/, https://faucet.metamask.io/<p>
+
+							<li>Step 3: Deploy smart contract to the ethereum TESTNET:</li>
+							<p>
+								by going back to the Remix IDE,where we wrote our code, once the metamask is connected we can deploy the smart contract by making the transaction through the ropsten testnet.
+							</p>
+						</ul>
+					</div>
+
+
 					<div id="reactvsangualr" class="tabcontent">
 						<h3>React/Angualr</h3>
 						<p>in this section we will be comparing two most used JavaScript Frontend frameworks </p>
@@ -450,6 +411,7 @@
 							<p>yes, it is possible, however in must cases the entire Application has to be written again in order to be compatible with new Framework,
 							therefore it is better to choose the right framework from the beginning.</p>
 						</div>
+
 						<div id="host" class="tabcontent">
 							<h3> GitHub pages setup !</h3>
 							<p>In this section, we will be publishing the static website on github so everybody can access it.
@@ -467,6 +429,14 @@
 									most importantly the html file needs to be the correct html format. </li>
 								</ol>
 							</p>
+						</div>
+						<div id="Resources" class="tabcontent">
+							<ol>
+								<li><a href="https://solidity.readthedocs.io/en/v0.5.3/">Solidity Documentation</a></li>
+								<li><a href="https://remix.readthedocs.io/en/latest/">Remix Documentation</a></li>
+								<li><a href="https://angular.io/docs">Angular Documentation</a></li>
+								<li><a href="https://reactjs.org/docs/getting-started.html">React Documentation</a></li>
+							</ol>
 						</div>
 						<script>
 							function openCity(evt, cityName) {
